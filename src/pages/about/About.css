@@ -9,9 +9,23 @@
   font-weight: 600;
   line-height: 1.4;
 }
+.aboutVision {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2%;
+  justify-content: space-between;
+}
 .aboutVisionCard {
   display: flex;
   gap: 20px;
+}
+.aboutVisionCard {
+  display: flex;
+  gap: 20px;
+  width: 48%;
+}
+.aboutVisionCard:first-child {
+  width: 100%;
 }
 .aboutVisionCard__div__image {
   min-width: 150px;
@@ -20,6 +34,8 @@
   position: relative;
   border-radius: 40px;
   box-shadow: 0px 2px 16px #cef3ff5c;
+  max-width: 151px;
+  max-height: 151px;
 }
 .aboutVisionCard__div__image__inside {
   position: absolute;

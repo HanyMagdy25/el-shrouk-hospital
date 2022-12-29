@@ -1,6 +1,5 @@
 import React from "react";
 import Navbar from "../../../components/Navbar/Navbar";
-import AboutVision from "./AboutVision/AboutVision";
 import HeroAboutContent from "./HeroAboutContent";
 
 function HeroAbout() {
@@ -9,7 +8,7 @@ function HeroAbout() {
       <div className="container">
         <Navbar />
         <HeroAboutContent />
-        <AboutVision/>
+        {/* <AboutVision/> */}
       </div>
     </div>
   );
