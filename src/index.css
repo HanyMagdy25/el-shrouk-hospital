@@ -1,13 +1,114 @@
+:root {
+  /* Colors: */
+  --color-black: #111110;
+  --color-white: #ffffff;
+  --color-blue: #113f7d;
+  --color-purple: #7338a4;
+  --color-red: #f5344e;
+  --color-yellow: #842022;
+  --color-whats: #25d366;
+  /* EL Shrouk Colors */
+  --color-bg: #F8F8F8;
+  --color-text: #707070;
+  --color-title: #4D658B;
+  --color-hero-title: #4A6286; 
+  --color-footer: #5A6498;
+  --color-wecare: #475A77;
+  --color-btn: #55C2EC;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background: var(--color-bg);
+  overflow-x: hidden;
+}
+/* Some Shortcuts */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2;
+  font-weight: 500;
+}
+/* .btn {
+  background-color: var(--color-blue);
+  border: 1px solid transparent;
+  border-radius: 10px;
+  color: #212529;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.02rem;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 0.563rem 1.463rem;
+  text-align: center;
+  text-decoration: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+} */
+a {
+  text-decoration: none;
+}
+button {
+  cursor: pointer;
+}
+.flex {
+  display: flex;
+}
+.flex-column{
+  flex-direction: column;
+}
+.flex-justify {
+  display: flex;
+  justify-content: space-between;
+}
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.text-center {
+  text-align: center;
+}
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1240px;
+  width: 100%;
+}
+input {
+  outline: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+textarea {
+  outline: none;
+}
+.btn-w-100 {
+  width: 100%;
+  margin-top: 10px;
+  padding: 0.763rem 1.563rem;
+  border-radius: 0.513rem;
+}
+.mb-2 {
+  margin-bottom: 2px;
+}
+.mb-10 {
+  margin-bottom: 10px;
+}
+textarea {
+  resize: none;
+}
+.box-shadow {
+  box-shadow: 0px 1px 7px 0px rgb(0 0 0 / 12%);
 }

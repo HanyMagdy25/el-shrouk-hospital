@@ -1,0 +1,62 @@
+.heroAboutContent {
+  margin-top: 50px;
+}
+.heroAboutContent p {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #193569;
+  font-weight: 600;
+  line-height: 1.4;
+}
+.aboutVisionCard {
+  display: flex;
+  gap: 20px;
+}
+.aboutVisionCard__div__image {
+  min-width: 150px;
+  min-height: 150px;
+  background: #baf4ff;
+  position: relative;
+  border-radius: 40px;
+  box-shadow: 0px 2px 16px #cef3ff5c;
+}
+.aboutVisionCard__div__image__inside {
+  position: absolute;
+  background: white;
+  border-radius: 40px;
+  top: 10px;
+  right: 10px;
+  padding: 20px;
+  box-shadow: 0px 2px 16px #cef3ff5c;
+  width: 150px;
+  height: 150px;
+}
+.aboutVisionCard__div__image__inside__mainImage {
+  width: 80%;
+}
+.aboutVisionCard__div__image__inside__iconImageTop {
+  width: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: contain;
+}
+.aboutVisionCard__div__image__inside__iconImageBottom {
+  position: absolute;
+  bottom: 10px;
+  right: -10px;
+  object-fit: contain;
+
+  width: 30px;
+}
+.aboutVisionCard__div__content h3 {
+  color: var(--color-footer);
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.aboutVisionCard__div__content p {
+  color: #193569;
+  font-size: 18px;
+}

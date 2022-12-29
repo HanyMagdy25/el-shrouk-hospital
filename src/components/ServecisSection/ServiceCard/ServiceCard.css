@@ -1,0 +1,33 @@
+.serviceCard {
+  width: 32%;
+  background-color: var(--color-white);
+  border-radius: 30px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.serviceCard img {
+  width: 50px;
+}
+.serviceCard__title {
+  color: var(--color-title);
+  margin-top: 10px;
+  font-weight: 700;
+}
+.serviceCard__description {
+  color: var(--color-title);
+  font-size: 18px;
+  margin-top: 10px;
+}
+.serviceCard__btn {
+  border: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  color: var(--color-btn);
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: 500;
+}
+.serviceCard__btn__icon {
+  margin-left: 10px;
+}

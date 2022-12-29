@@ -1,0 +1,33 @@
+.news {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+.news__images {
+  display: flex;
+  gap: 20px;
+  margin-top: 50px;
+  height: 500px;
+}
+.news__images__left {
+  width: 50%;
+}
+.news__images__right {
+  width: 50%;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 20px;
+}
+.news__images__right__top {
+  width: 100%;
+  height: 50%;
+}
+.news__images__right__bottom {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.news__images__right__bottom div {
+  width: 50%;
+}
