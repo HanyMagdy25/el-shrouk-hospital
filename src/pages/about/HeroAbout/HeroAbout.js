@@ -8,7 +8,6 @@ function HeroAbout() {
       <div className="container">
         <Navbar />
         <HeroAboutContent />
-        {/* <AboutVision/> */}
       </div>
     </div>
   );

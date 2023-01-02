@@ -1,0 +1,23 @@
+.gallery__paragraph{
+    color: #193569;
+    font-weight: 600;
+}
+.GalleryCard__title{
+    color: #193569;
+    font-weight: 700;
+
+}
+
+.gallery__hover__div{
+    margin-top: 50px;
+    height: 400px;
+    /* background-color: bisque; */
+    display: flex;
+    align-items: center;
+}
+.gallery__btns button{
+    margin-right: 15px;
+    margin-bottom: 20px;
+    min-width: unset !important;
+    padding: 12px 30px !important;
+}

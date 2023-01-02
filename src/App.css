@@ -24,6 +24,10 @@
 .btn-fill:hover {
   transform: scale(1.02);
 }
+.btn-fill.notActive {
+  color: #96a1de;
+  background-color: #dde2ff;
+}
 /* ------ Paragraph------ */
 p {
   color: var(--color-text);
@@ -35,7 +39,7 @@ p {
 
 .main__title-div {
   color: #bababa;
-  color: var(--color-blue);
+  color: var(--color-title);
   position: relative;
   line-height: 1.2;
 }
@@ -60,7 +64,7 @@ p {
   text-align: center;
   /* margin-bottom: 15px; */
   font-size: 30px;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 /* news image */
@@ -69,4 +73,19 @@ p {
   height: 100%;
   object-fit: cover;
   border-radius: 3px;
+}
+.image__mainStyle {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gradient {
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  z-index: 3;
+  background: transparent
+    linear-gradient(180deg, #ffffff00 0%, #ffffffc9 79%, #ffffff 100%) 0% 0%
+    no-repeat padding-box;
 }

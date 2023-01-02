@@ -30,7 +30,7 @@ function Footer() {
             <Link to="/services">Our Services</Link>
             <Link to="/contact">Contact Us</Link>
           </div>
-          <div className="footer__second">
+          <div className="footer__second mr-28">
             <a href="https://www.google.com/">
               <span>WhatsApp</span>
               <span className="flex-center">

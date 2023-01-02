@@ -1,0 +1,32 @@
+.heroNewsInsideContent {
+  color: #193569;
+}
+.heroNewsInsideContent p {
+  color: #193569;
+}
+.heroNewsInsideContent__images {
+  display: flex;
+  height: 400px;
+  gap: 1%;
+  margin-top: -250px;
+}
+.heroNewsInsideContent__images__selected {
+  width: 65%;
+}
+.heroNewsInsideContent__images__right {
+  width: 35%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 10px;
+  background: #0000001c 0% 0% no-repeat padding-box;
+  padding: 5px;
+}
+.heroNewsInsideContent__images__right img {
+  width: 97px;
+  height: 97px;
+  cursor: pointer;
+}
+.heroNewsInsideContent__images__right .some-blur {
+  filter: brightness(0.5);
+}

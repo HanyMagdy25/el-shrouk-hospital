@@ -1,0 +1,39 @@
+.eventsNews {
+    height: 500px;
+}
+.eventsNews__main {
+  width: 60%;
+}
+.eventsNews__right {
+  width: 40%;
+  overflow-y: scroll;
+}
+.eventsNews__main__content {
+  color: #193569;
+}
+.eventsNews__main__content h3 {
+  font-size: 20px;
+  font-weight: 700;
+}
+.eventsNews__main__content button {
+  /* font-size: 18px; */
+  font-weight: 600;
+}
+
+.eventsNewsCard {
+  background-color: var(--color-white);
+}
+.eventsNewsCard__image {
+  width: 150px;
+  /* height: 100%; */
+}
+.eventsNewsCard__content {
+  color: #193569;
+}
+.eventsNewsCard__content h2{
+  font-weight: 700;
+  font-size: 16px;
+}
+.eventsNewsCard button{
+    color: var(--color-btn);
+}

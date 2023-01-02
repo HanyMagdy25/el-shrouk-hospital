@@ -1,0 +1,24 @@
+.contactUs {
+  margin-top: 50px;
+}
+.contactUs__image h3 {
+  color: var(--color-title);
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.contactUs__image h4 {
+  color: var(--color-btn);
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+.contactUs__image h4 span {
+  color: #626262;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.contactUs__image__content {
+  box-shadow: 0px 0px 26px #aac7ff7e;
+}

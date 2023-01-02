@@ -1,0 +1,67 @@
+.medicalCard {
+  /* background-color: rgb(151, 151, 151); */
+  width: 45%;
+  position: relative;
+  margin-bottom: 85px;
+  display: flex;
+}
+.medicalCard:nth-child(even) {
+  margin-top: 80px;
+  margin-bottom: 30px;
+}
+
+.medicalCard__img {
+  width: 200px;
+  height: 200px;
+  border-radius: 35px;
+}
+.medicalCard__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.medicalCard__content {
+  background-color: var(--color-white);
+  /* display: flex;
+  flex-grow: 1; */
+  border-radius: 25px;
+  position: absolute;
+  top: -20px;
+  right: 30px;
+  /* width:80px; */
+  width: calc(100% - 200px);
+  padding: 15px 50px 20px 15px;
+}
+.medicalCard__content h2 {
+  color: #193569;
+  font-weight: 700;
+  font-size: 25px;
+}
+.medicalCard__content ul li {
+  content: "\2022";
+  color: #193569;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 8px;
+}
+.medicalCard__content ul li::before {
+  content: "\2022";
+  color: #9db0ff;
+  font-weight: 900;
+  display: inline-block;
+  width: 1rem;
+  margin-left: 0em;
+}
+.medicalCard__icon {
+  width: 70px;
+  height: 70px;
+  z-index: 3;
+  position: absolute;
+  top: -35px;
+  right: 0;
+}
+.medicalCard__icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
