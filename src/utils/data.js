@@ -30,7 +30,6 @@ import equipmentIcon6 from "../assets/equipment/icon6.png";
 // Importing News images
 import newsImage1 from "../assets/news/news2.jpg";
 
-
 export const navTitle = [
   {
     title: "HOME",
@@ -138,8 +137,10 @@ export const equipmentData = [
     icon: equipmentIcon1,
     description: [
       "8 highly equipped emergency beds",
-      "Intensive care ambulance", "8 highly equipped emergency beds",
-      "Intensive care ambulance", "8 highly equipped emergency beds",
+      "Intensive care ambulance",
+      "8 highly equipped emergency beds",
+      "Intensive care ambulance",
+      "8 highly equipped emergency beds",
       "Intensive care ambulance",
     ],
   },
@@ -190,61 +191,69 @@ export const equipmentData = [
   },
 ];
 
-
-
-
-
 export const newsData = [
   {
     title: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed di…",
-    by:"Admin",
-    id:1,
-    date:"12/03/2022 12:30 AM",
-    image: [equipmentImg6,equipmentImg2,equipmentImg1,equipmentImg5,equipmentImg1,equipmentImg5],
-    description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dol élite …."
+    by: "Admin",
+    id: 1,
+    date: "12/03/2022 12:30 AM",
+    image: [
+      equipmentImg6,
+      equipmentImg2,
+      equipmentImg1,
+      equipmentImg5,
+      equipmentImg1,
+      equipmentImg5,
+    ],
+    description:
+      "Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
   },
   {
     title: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed di…",
-    by:"Admin",
-    id:2,
-    date:"12/03/2022 12:30 AM",
-    image: [equipmentImg5,equipmentImg2,equipmentImg1,equipmentImg5],
-    description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dol élite …."
+    by: "Admin",
+    id: 2,
+    date: "12/03/2022 12:30 AM",
+    image: [equipmentImg5, equipmentImg2, equipmentImg1, equipmentImg5],
+    description:
+      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dol élite ….",
   },
   {
     title: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed di…",
-    by:"Admin",
-    id:3,
-    date:"12/03/2022 12:30 AM",
-    image: [equipmentImg4,equipmentImg2,equipmentImg1,equipmentImg5],
-    description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dol élite …."
+    by: "Admin",
+    id: 3,
+    date: "12/03/2022 12:30 AM",
+    image: [equipmentImg4, equipmentImg2, equipmentImg1, equipmentImg5],
+    description:
+      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dol élite ….",
   },
   {
     title: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed di…",
-    by:"Admin",
-    id:4,
-    date:"12/03/2022 12:30 AM",
-    image: [equipmentImg3,equipmentImg2,equipmentImg1,equipmentImg5],
-    description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dol élite …."
+    by: "Admin",
+    id: 4,
+    date: "12/03/2022 12:30 AM",
+    image: [equipmentImg3, equipmentImg2, equipmentImg1, equipmentImg5],
+    description:
+      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dol élite ….",
   },
   {
     title: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed di…",
-    by:"Admin",
-    id:5,
-    date:"12/03/2022 12:30 AM",
-    image: [equipmentImg2,equipmentImg2,equipmentImg1,equipmentImg5],
-    description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dol élite …."
+    by: "Admin",
+    id: 5,
+    date: "12/03/2022 12:30 AM",
+    image: [equipmentImg2, equipmentImg2, equipmentImg1, equipmentImg5],
+    description:
+      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dol élite ….",
   },
   {
     title: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed di…",
-    by:"Admin",
-    id:6,
-    date:"12/03/2022 12:30 AM",
-    image: [equipmentImg1,equipmentImg2,equipmentImg1,equipmentImg5],
-    description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dol élite …."
+    by: "Admin",
+    id: 6,
+    date: "12/03/2022 12:30 AM",
+    image: [equipmentImg1, equipmentImg2, equipmentImg1, equipmentImg5],
+    description:
+      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dol élite ….",
   },
 ];
-
 
 export const galleryData = [
   {
@@ -272,4 +281,3 @@ export const galleryData = [
     image: equipmentImg5,
   },
 ];
-

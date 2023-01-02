@@ -30,3 +30,18 @@
 .heroNewsInsideContent__images__right .some-blur {
   filter: brightness(0.5);
 }
+.newsInsideMainContent__allParagraph {
+    color: #193569;
+}
+.newsInsideMainContent__allParagraph h4{
+    color: #193569;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 15px;
+}
+.newsInsideMainContent__allParagraph p{
+    color: #193569;
+    font-size: 17px;
+    font-weight: 500;
+    margin-top: 5px;
+}
