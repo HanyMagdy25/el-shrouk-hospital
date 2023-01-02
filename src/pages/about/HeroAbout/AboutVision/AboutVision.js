@@ -5,15 +5,30 @@ import vision2 from "../../../../assets/vision/vision2.png";
 import vision3 from "../../../../assets/vision/vision3.png";
 
 const visionData = [
-  { title: "", image: vision1 },
-  { title: "", image: vision2 },
-  { title: "", image: vision3 },
+  {
+    title: "Our Values",
+    image: vision1,
+    description:
+      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diaorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diaorem ipsum dolor sit amet, consetetur sadipscing elitr, sed dia",
+  },
+  {
+    title: "Our Values",
+    image: vision2,
+    description:
+      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diaorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diaorem ipsum dolor sit amet, consetetur sadipscing elitr, sed dia",
+  },
+  {
+    title: "Our Values",
+    image: vision3,
+    description:
+      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diaorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diaorem ipsum dolor sit amet, consetetur sadipscing elitr, sed dia",
+  },
 ];
 function AboutVision() {
   return (
     <div className="aboutVision container">
       {visionData.map((item, index) => (
-        <AboutVisionCard key={index} item={item}/>
+        <AboutVisionCard key={index} item={item} />
       ))}
     </div>
   );

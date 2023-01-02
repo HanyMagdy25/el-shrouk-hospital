@@ -11,19 +11,31 @@
   --color-yellow: #842022;
   --color-whats: #25d366;
   /* EL Shrouk Colors */
-  --color-bg: #F8F8F8;
+  --color-bg: #f8f8f8;
   --color-text: #707070;
-  --color-title: #4D658B;
-  --color-hero-title: #4A6286; 
-  --color-footer: #5A6498;
-  --color-wecare: #475A77; 
-  --color-btn: #55C2EC; 
+  --color-title: #4d658b;
+  --color-hero-title: #4a6286;
+  --color-footer: #5a6498;
+  --color-wecare: #475a77;
+  --color-btn: #55c2ec;
 }
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
+}
+@font-face {
+  font-family: "UbuntuArabic-Bold";
+  src: url("../src/assets/fonts/UbuntuArabic-Bold.eot");
+  src: url("../src/assets/fonts/UbuntuArabic-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../src/assets/fonts/UbuntuArabic-Bold.woff2") format("woff2"),
+    url("../src/assets/fonts/UbuntuArabic-Bold.woff") format("woff"),
+    url("../src/assets/fonts/UbuntuArabic-Bold.ttf") format("truetype"),
+    url("../src/assets/fonts/UbuntuArabic-Bold.svg#svgFontName") format("svg");
+  font-display: swap;
+  font-style: normal;
 }
 body {
   margin: 0;
@@ -42,7 +54,7 @@ h6 {
   font-weight: 500;
   font-size: unset;
 }
-p{
+p {
   margin-bottom: 0rem;
 }
 a {
@@ -54,7 +66,7 @@ button {
 .flex {
   display: flex;
 }
-.flex-column{
+.flex-column {
   flex-direction: column;
 }
 .flex-justify {
@@ -100,7 +112,7 @@ textarea {
 .box-shadow {
   box-shadow: 0px 1px 7px 0px rgb(0 0 0 / 12%);
 }
-ul{
+ul {
   list-style: none;
   padding-left: unset;
   margin-bottom: unset;

@@ -1,5 +1,6 @@
 .eventsNews {
     height: 500px;
+    margin-top: -150px;
 }
 .eventsNews__main {
   width: 60%;
@@ -8,6 +9,32 @@
   width: 40%;
   overflow-y: scroll;
 }
+
+.eventsNews__right::-webkit-scrollbar {
+  width: 10px;
+  height: 5px;
+  border-radius: 50px;
+  /* display: none; */
+}
+/* Track */
+.eventsNews__right::-webkit-scrollbar-track {
+  background: rgba(166, 166, 166, 0.2);
+  border-radius: 50px;
+}
+
+/* Handle */
+.eventsNews__right::-webkit-scrollbar-thumb {
+  background: var(--color-btn);
+  border-radius: 50px;
+}
+
+/* Handle on hover */
+.eventsNews__right::-webkit-scrollbar-thumb:hover {
+  background: #193569;
+  border-radius: 50px;
+}
+
+
 .eventsNews__main__content {
   color: #193569;
 }

@@ -21,3 +21,8 @@
     min-width: unset !important;
     padding: 12px 30px !important;
 }
+.gallerySwiper__div{
+    padding: 0 70px;
+    background: rgba(0, 0, 0, 0.124);
+    position: relative;
+}

@@ -1,4 +1,5 @@
 import React from 'react'
+import ContactUs from '../../components/ContactUs/ContactUs'
 import Gallery from '../../components/Gallery/Gallery'
 import EventsNews from './EventsNews/EventsNews'
 import HeroNews from './HeroNews/HeroNews'
@@ -10,6 +11,7 @@ function News() {
         <HeroNews/>
         <EventsNews/>
         <Gallery/>
+        <ContactUs/>
     </div>
   )
 }

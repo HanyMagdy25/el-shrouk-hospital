@@ -18,12 +18,13 @@
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
-  gap: 10px;
+  gap: 2%;
   background: #0000001c 0% 0% no-repeat padding-box;
   padding: 5px;
+  overflow-y: scroll;
 }
 .heroNewsInsideContent__images__right img {
-  width: 97px;
+  width: 23.5%;
   height: 97px;
   cursor: pointer;
 }
@@ -44,4 +45,30 @@
     font-size: 17px;
     font-weight: 500;
     margin-top: 5px;
+}
+
+
+
+.heroNewsInsideContent__images__right::-webkit-scrollbar {
+  width: 10px;
+  height: 5px;
+  border-radius: 50px;
+  /* display: none; */
+}
+/* Track */
+.heroNewsInsideContent__images__right::-webkit-scrollbar-track {
+  background: rgba(166, 166, 166, 0.2);
+  border-radius: 50px;
+}
+
+/* Handle */
+.heroNewsInsideContent__images__right::-webkit-scrollbar-thumb {
+  background: var(--color-btn);
+  border-radius: 50px;
+}
+
+/* Handle on hover */
+.heroNewsInsideContent__images__right::-webkit-scrollbar-thumb:hover {
+  background: #193569;
+  border-radius: 50px;
 }

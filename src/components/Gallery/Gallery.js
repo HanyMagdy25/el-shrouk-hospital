@@ -1,6 +1,7 @@
-import { galleryData } from "../../utils/data";
+import { galleryData, galleryDataSwiper } from "../../utils/data";
 import "./Gallery.css";
 import GalleryCard from "./GalleryCard/GalleryCard";
+import GallerySwiper from "./GallerySwiper/GallerySwiper";
 function Gallery() {
   return (
     <div className="gallery container mt-20">
@@ -32,6 +33,9 @@ function Gallery() {
         <button className="btn-fill notActive">physiotherapy</button>
         <button className="btn-fill notActive">Dental unit</button>
         <button className="btn-fill notActive">Neurology unit</button>
+      </div>
+      <div>
+        <GallerySwiper />
       </div>
     </div>
   );

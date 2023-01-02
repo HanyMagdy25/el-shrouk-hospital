@@ -14,6 +14,7 @@
   flex-wrap: wrap;
   gap: 2%;
   justify-content: space-between;
+  margin-bottom: 80px;
 }
 .aboutVisionCard {
   display: flex;
@@ -71,6 +72,7 @@
   font-size: 22px;
   font-weight: 700;
   margin-bottom: 8px;
+  margin-top: 8px;
 }
 .aboutVisionCard__div__content p {
   color: #193569;

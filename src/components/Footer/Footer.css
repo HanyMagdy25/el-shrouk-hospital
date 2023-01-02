@@ -30,6 +30,7 @@ footer {
   font-weight: 600;
   font-size: 17px;
   margin: 3px 0;
+  font-family: "UbuntuArabic-Bold";
 }
 .footer__first__content p {
   color: var(--color-white);

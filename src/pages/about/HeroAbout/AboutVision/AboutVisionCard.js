@@ -3,6 +3,10 @@ import vision4 from "../../../../assets/vision/vision4.png";
 import vision5 from "../../../../assets/vision/vision5.png";
 
 function AboutVisionCard({item}) {
+  function truncate(string, n) {
+    return string?.length > n ? string.substr(0, n - 1) + "..." : string;
+  }
+
   return (
     <div className="aboutVisionCard">
       <div className="aboutVisionCard__div__image">
@@ -30,12 +34,7 @@ function AboutVisionCard({item}) {
       <div className="aboutVisionCard__div__content">
         <h3>{item.title}</h3>
         <p>
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-          sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-          rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-          ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-          sadipscing elitr, sed diam nonumy
+          {truncate(item.description, 150)}
         </p>
       </div>
     </div>
