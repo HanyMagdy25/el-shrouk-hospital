@@ -3,7 +3,7 @@ import "./Gallery.css";
 import GalleryCard from "./GalleryCard/GalleryCard";
 function Gallery() {
   return (
-    <div className="gallery container mt-12">
+    <div className="gallery container mt-20">
       <div className="flex-center">
         <div className="main__title-div">
           <h2 className="main__title">Gallery & Media</h2>
