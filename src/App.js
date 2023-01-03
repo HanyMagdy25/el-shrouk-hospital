@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import "./App.css";
+import ScrollToTop from "react-scroll-to-top";
 import Footer from "./components/Footer/Footer";
 import About from "./pages/about/About";
 import Home from "./pages/Home/Home";
@@ -9,7 +10,7 @@ import News from "./pages/News/News";
 import NewsInside from "./pages/NewsInside/NewsInside";
 
 function App() {
-  function ScrollToTop() {
+  function ScrollToTopAfterChangePage() {
     const { pathname } = useLocation();
     useEffect(() => {
       window.scrollTo(0, 0);
@@ -19,7 +20,7 @@ function App() {
   return (
     <div className="app">
       <BrowserRouter>
-        <ScrollToTop />
+        <ScrollToTopAfterChangePage />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -27,7 +28,8 @@ function App() {
           <Route path="/news" element={<News />} />
           <Route path="/news/:id" element={<NewsInside />} />
         </Routes>
-        <Footer/>
+        <ScrollToTop smooth color="white" width="32" height="50"/>
+        <Footer />
       </BrowserRouter>
     </div>
   );

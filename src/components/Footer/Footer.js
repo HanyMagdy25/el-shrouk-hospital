@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Footer.css";
 import logo from "../../assets/logo.png";
 import { Link } from "react-router-dom";
 import { IoLogoWhatsapp } from "react-icons/io";
 function Footer() {
+  const [whatsapp, setWhatsapp] = useState("01112994482");
+  const [phone, setPhone] = useState("01112994482");
   return (
     <footer>
       <div className="container">
@@ -20,7 +22,12 @@ function Footer() {
                 Governorate 11835
               </p>
               <h5>
-                Hotline : <span>17121</span>{" "}
+                Hotline :{" "}
+                <span>
+                  <a href={`tel:${phone}`} target="_blank" rel="noreferrer">
+                    17121
+                  </a>{" "}
+                </span>{" "}
               </h5>
               <h5>ahmed.hussein@ibnsina-pharma.com</h5>
             </div>
@@ -31,7 +38,11 @@ function Footer() {
             <Link to="/contact">Contact Us</Link>
           </div>
           <div className="footer__second mr-28">
-            <a href="https://www.google.com/">
+            <a
+              href={`https://wa.me/${whatsapp}`}
+              target="_blank"
+              rel="noreferrer"
+            >
               <span>WhatsApp</span>
               <span className="flex-center">
                 <IoLogoWhatsapp /> 01234567890
@@ -41,7 +52,9 @@ function Footer() {
             <a href="https://www.google.com/">linkedin</a>
           </div>
         </div>
-        <div className="flex-center copyRight"><p>2022 “shorouk specialised hospital” all rights reserved</p></div>
+        <div className="flex-center copyRight">
+          <p>2022 “shorouk specialised hospital” all rights reserved</p>
+        </div>
       </div>
     </footer>
   );

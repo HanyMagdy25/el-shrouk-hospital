@@ -31,3 +31,20 @@
 .news__images__right__bottom div {
   width: 50%;
 }
+
+@media screen and (max-width: 1000px) {
+  .news__images {
+    padding: 0 20px;
+    height: unset;
+  }
+}
+/* @media screen and (max-width: 768px) {
+  .news__images {
+    padding: 0 20px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .news__images {
+    padding: 0 20px;
+  }
+} */

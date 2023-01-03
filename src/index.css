@@ -17,7 +17,7 @@
   --color-hero-title: #4a6286;
   --color-footer: #5a6498;
   --color-wecare: #475a77;
-  --color-btn: #55c2ec;
+  --color-btn: #55c2ec; 
 }
 * {
   margin: 0;
@@ -36,6 +36,9 @@
     url("../src/assets/fonts/UbuntuArabic-Bold.svg#svgFontName") format("svg");
   font-display: swap;
   font-style: normal;
+}
+html {
+  scroll-behavior: smooth;
 }
 body {
   margin: 0;

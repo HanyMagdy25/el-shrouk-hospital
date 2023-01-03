@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import drImg2 from "../../../assets/hero2.png";
 function HeroContent() {
+  const [soon, setSoon] = useState(false);
   return (
     <div className="heroContent">
       <div className="heroContent__left">
@@ -14,8 +15,11 @@ function HeroContent() {
           rebum. Stet clita kasd gubergren.
         </p>
         <div className="heroContent__left__btns">
-          <button className="btn-fill">Get appointment</button>
+          <button onClick={() => setSoon(true)} className="btn-fill">
+            Get appointment
+          </button>
           {/* <button className="btn-outline">Specialists</button> */}
+          {soon && <p className="text-center">Available soon</p>}
         </div>
       </div>
       <div className="heroContent__right">

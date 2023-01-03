@@ -89,21 +89,56 @@ p {
     linear-gradient(180deg, #ffffff00 0%, #ffffffc9 79%, #ffffff 100%) 0% 0%
     no-repeat padding-box;
 }
-.swiper {
+.gallerySwiper__div .swiper {
   position: unset !important;
 }
-.swiper-button-prev:after {
+.gallerySwiper__div .swiper-button-prev:after {
   content: url("/src/assets/arrow-left.png") !important;
-  transform: scale(.7);
+  transform: scale(0.7);
 }
-.swiper-button-next:after {
+.gallerySwiper__div .swiper-button-next:after {
   content: url("/src/assets/arrow-right.png") !important;
-  transform: scale(.7);
+  transform: scale(0.7);
 }
-.swiper-button-prev {
+.gallerySwiper__div .swiper-button-prev {
   left: 20px !important;
-  
 }
-.swiper-button-next {
-   bottom: 20px !important;
+.gallerySwiper__div .swiper-button-next {
+  right: 20px !important;
+}
+.some-blur {
+  filter: brightness(0.5);
+}
+
+.scroll-to-top {
+  background-color: #47acd6 !important;
+  color: var(--color-white) !important;
+  width: 50px !important;
+  height: 80px !important;
+  box-shadow: 0px 3px 6px #00000029 !important;
+  border-radius: 50px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .main__title {
+    font-size: 26px;
+  }
+  .main__title-div::before,
+  .main__title-div::after {
+    top: -45%;
+    margin: 0 20px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .main__title {
+    font-size: 24px;
+  }
+  .main__title-div::before,
+  .main__title-div::after {
+    top: -65%;
+    margin: 0 15px;
+  }
 }

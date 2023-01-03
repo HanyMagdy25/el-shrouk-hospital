@@ -4,7 +4,7 @@ import "./ServecisSection.css";
 import ServiceCard from "./ServiceCard/ServiceCard";
 function ServecisSection() {
   return (
-    <div className="servecisSection">
+    <div className="servecisSection" id="services">
       <div className="container">
         <div className="flex-center">
           <div className="main__title-div">

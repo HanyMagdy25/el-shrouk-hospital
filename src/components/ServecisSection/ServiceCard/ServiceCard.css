@@ -1,9 +1,13 @@
 .serviceCard {
   width: 32%;
-  background-color: var(--color-white);
+  background-color: #ffffff42;
   border-radius: 30px;
   padding: 20px;
   margin-bottom: 20px;
+  transition: all 0.2s;
+}
+.serviceCard:hover {
+  background-color: var(--color-white);
 }
 .serviceCard img {
   width: 50px;
@@ -30,4 +34,15 @@
 }
 .serviceCard__btn__icon {
   margin-left: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+  .serviceCard {
+    width: 49%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .serviceCard {
+    width: 100%;
+  }
 }

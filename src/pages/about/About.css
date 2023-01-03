@@ -1,3 +1,6 @@
+.about{
+  min-height: calc(100vh - 248px);
+}
 .heroAboutContent {
   margin-top: 50px;
 }

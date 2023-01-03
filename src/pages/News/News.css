@@ -64,3 +64,23 @@
 .eventsNewsCard button{
     color: var(--color-btn);
 }
+.related__threeCards .eventsNewsCard__image{
+  width: 100px !important;
+}
+.related__threeCards .eventsNewsCard__content {
+  padding: 0.3rem 0.5rem;
+}
+.related__threeCards .eventsNewsCard__content h2{
+  font-weight: 600;
+  font-size: 12px;
+}
+.related__threeCards .eventsNewsCard__content p{
+  font-size: 10px;
+  line-height: 0.7rem;
+}
+.related__threeCards .eventsNewsCard__content span{
+  font-size: 10px;
+}
+.related__threeCards .eventsNewsCard__content button{
+  font-size: 10px;
+}

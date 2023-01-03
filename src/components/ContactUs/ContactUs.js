@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ContactUs.css";
 import map2 from "../../assets/map2.png";
 import facebookIcon from "../../assets/facebook.png";
 import linkedinIcon from "../../assets/linkedin.png";
 function ContactUs() {
+  const [whatsapp, setWhatsapp] = useState("01112994482");
+  const [phone, setPhone] = useState("01112994482");
   // To Open Google Map With lat and lng
   const lat = "30.089726";
   const lng = "31.638698";
@@ -22,13 +24,27 @@ function ContactUs() {
           <div className="contactUs__image__content rounded-xl bg-white p-6 ">
             <h3>Contact</h3>
             <h4>
-              Hotline : <span>17121</span>
+              Hotline :{" "}
+              <span className="contactUs__phone">
+                <a href={`tel:${phone}`} target="_blank" rel="noreferrer">
+                  17121
+                </a>
+              </span>
             </h4>
             <h4>
               Email :<span>tayseer@elshroukhospital.com</span>
             </h4>
             <h4>
-              WhatsApp :<span>01234567890</span>
+              WhatsApp :
+              <span>
+                <a
+                  href={`https://wa.me/${whatsapp}`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  01234567890
+                </a>
+              </span>
             </h4>
             <h3>Location</h3>
             <p>
@@ -53,8 +69,19 @@ function ContactUs() {
               </a>
             </div>
           </div>
-          {/* <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d109436.06621575782!2d31.362252800000004!3d31.0018048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2seg!4v1672653802035!5m2!1sen!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> */}
-          <img src={map2} alt="map" onClick={showInMapClicked} className="rounded-xl py-3" />
+          <div className="contactUs__mapGoogle rounded-xl py-3">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d109436.06621575782!2d31.362252800000004!3d31.0018048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2seg!4v1672653802035!5m2!1sen!2seg"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="el-shrouk-hospital"
+            ></iframe>
+          </div>
+          {/* <img src={map2} alt="map" onClick={showInMapClicked} className="rounded-xl py-3" /> */}
         </div>
       </div>
     </div>

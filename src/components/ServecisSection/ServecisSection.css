@@ -1,16 +1,21 @@
-.servecisSection{
-    margin-top: 100px;
+.servecisSection {
+  margin-top: 70px;
 }
-.servecisSection__paragraph{
-    margin-top: 50px;
-    font-size: 16px;
-    text-align: center;
-    padding:0 40px ;
+.servecisSection__paragraph {
+  margin-top: 50px;
+  font-size: 16px;
+  text-align: center;
+  padding: 0 40px;
 }
-.servecisSection__cards{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2%;
-    margin-top: 50px;
+.servecisSection__cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2%;
+  margin-top: 50px;
+}
 
+@media screen and (max-width: 1000px) {
+  .servecisSection__cards {
+    padding: 0 20px;
+  }
 }

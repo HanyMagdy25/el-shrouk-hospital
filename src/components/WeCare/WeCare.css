@@ -1,5 +1,5 @@
 .weCare {
-margin-top: 70px;
+  margin-top: 70px;
 }
 .weCare__container {
   display: flex;
@@ -69,5 +69,26 @@ margin-top: 70px;
 }
 .weCare__right__card__content p {
   color: var(--color-title);
-  /* font-size: 16px; */
+}
+
+@media screen and (max-width: 1000px) {
+  .weCare__right__card__content p {
+    line-height: 1.1;
+  }
+  .weCare__container {
+    padding: 0 20px;
+  }
+}
+@media screen and (max-width: 850px) {
+  .weCare__container {
+    display: flex;
+    flex-direction: column;
+  }
+  .weCare__left {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .weCare__right {
+    width: 100%;
+  }
 }
