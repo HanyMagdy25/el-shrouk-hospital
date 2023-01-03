@@ -5,6 +5,7 @@ import ServecisSection from "../../components/ServecisSection/ServecisSection";
 import WeCare from "../../components/WeCare/WeCare";
 import godownIcon from "../../assets/godown.png"
 import Team from "../../components/Team/Team";
+import ContactUs from "../../components/ContactUs/ContactUs";
 
 function Home() {
   return (
@@ -17,6 +18,7 @@ function Home() {
       <WeCare/>
       <News/>
       <Team/>
+      <ContactUs/>
     </div>
   );
 }

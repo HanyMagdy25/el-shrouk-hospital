@@ -19,8 +19,10 @@ function WeCare() {
           <div className="weCare__right__allCards">
             {weCareData.map((item, index) => (
               <div key={index} className="weCare__right__card">
-                <div className="weCare__right__card__img flex-center">
-                  <img src={item.icon} alt={item.title} />
+                <div className="weCare__right__card__img ">
+                  <div>
+                    <img src={item.icon} alt={item.title} />
+                  </div>
                 </div>
                 <div className="weCare__right__card__content">
                   <h4>{item.title}</h4>
