@@ -1,13 +1,13 @@
 import React from "react";
 import "./MedicalCard.css";
-function MedicalCard({ item }) {
+function MedicalCard({ item, language }) {
   return (
-    <div className="medicalCard">
+    <div className={`medicalCard ${language === "ar" && "medicalCard__ar"}`}>
       <div className="medicalCard__img">
         <img src={item.image} alt={item.titlte} />
       </div>
       <div className="medicalCard__content">
-        <h2 >{item.title}</h2>
+        <h2>{item.title}</h2>
         {item.description.map((i, index) => (
           <ul key={index}>
             <li>{i}</li>

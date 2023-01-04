@@ -44,7 +44,7 @@ function Footer() {
               rel="noreferrer"
             >
               <span>WhatsApp</span>
-              <span className="flex-center">
+              <span className="flex-center gap-1">
                 <IoLogoWhatsapp /> 01234567890
               </span>
             </a>
@@ -53,7 +53,7 @@ function Footer() {
           </div>
         </div>
         <div className="flex-center copyRight">
-          <p>2022 “shorouk specialised hospital” all rights reserved</p>
+          <p >2022 “shorouk specialised hospital” all rights reserved</p>
         </div>
       </div>
     </footer>

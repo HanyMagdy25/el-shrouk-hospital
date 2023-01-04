@@ -31,11 +31,8 @@
   margin-top: 10px;
   font-size: 18px;
   font-weight: 500;
+  gap: 10px;
 }
-.serviceCard__btn__icon {
-  margin-left: 10px;
-}
-
 @media screen and (max-width: 1000px) {
   .serviceCard {
     width: 49%;

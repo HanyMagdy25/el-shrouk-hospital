@@ -4,6 +4,7 @@
 .weCare__container {
   display: flex;
   justify-content: space-between;
+  gap: 15px;
 }
 .weCare__left {
   width: 50%;
@@ -46,18 +47,9 @@
 }
 .weCare__right__card {
   display: flex;
-  gap: 15px;
+  gap: 5px;
 }
 .weCare__right__card__img {
-  /* margin-right: 15px; */
-  /* padding: 12px; */
-  /* min-width: 40px;
-  max-width: 70px;
-  min-height: 40px;
-  max-height: 70px; */
-  /* border-radius: 50%; */
-  /* background: transparent linear-gradient(141deg, #50c6df 0%, #4d658b 100%) 0%
-    0% no-repeat padding-box; */
   width: 180px;
 }
 .weCare__right__card__img div {

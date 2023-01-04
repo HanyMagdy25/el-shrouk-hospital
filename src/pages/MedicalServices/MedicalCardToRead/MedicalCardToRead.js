@@ -31,7 +31,7 @@ function MedicalCardToRead({ item }) {
         <img src={item.icon} alt={item.title} />
         <h3>{item.title}</h3>
       </div>
-      <p className="medicalCardToRead__description">
+      <div className="medicalCardToRead__description">
         <ReadMore>
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
           nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
@@ -43,7 +43,7 @@ function MedicalCardToRead({ item }) {
           et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
           takimata sanctus est Lorem ipsum dolor sit amet
         </ReadMore>
-      </p>
+      </div>
     </div>
   );
 }

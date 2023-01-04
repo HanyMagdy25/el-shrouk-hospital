@@ -65,3 +65,27 @@
   height: 100%;
   object-fit: contain;
 }
+
+.medicalCard__ar .medicalCard__content {
+  top: -20px;
+  left: 30px ;
+  right: unset;
+  padding: 15px 15px 20px 50px ;
+}
+.medicalCard__ar .medicalCard__icon {
+  left: 0;
+  right: unset;
+}
+
+@media screen and (max-width: 1000px) {
+  .medicalCard:nth-child(even) {
+    margin-top: 0px;
+    margin-bottom: 30px;
+  }
+  .medicalCard {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+}

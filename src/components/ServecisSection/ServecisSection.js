@@ -1,8 +1,8 @@
 import React from "react";
-import { servicesData } from "../../utils/data";
+// import { servicesData } from "../../utils/data";
 import "./ServecisSection.css";
 import ServiceCard from "./ServiceCard/ServiceCard";
-function ServecisSection() {
+function ServecisSection({language,servicesData}) {
   return (
     <div className="servecisSection" id="services">
       <div className="container">
@@ -20,7 +20,7 @@ function ServecisSection() {
         </p>
         <div className="servecisSection__cards">
           {servicesData.map((item, index) => (
-            <ServiceCard key={index} item={item} />
+            <ServiceCard key={index} item={item} language={language}/>
           ))}
         </div>
       </div>

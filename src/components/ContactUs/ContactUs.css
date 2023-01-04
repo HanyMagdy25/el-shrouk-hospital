@@ -18,7 +18,7 @@
   font-weight: 500;
   font-size: 15px;
 }
-.contactUs__phone{
+.contactUs__phone {
   font-size: 20px !important;
   font-weight: 600 !important;
 }
@@ -26,10 +26,24 @@
 .contactUs__image__content {
   box-shadow: 0px 0px 26px #aac7ff7e;
 }
-.contactUs__mapGoogle{
+.contactUs__mapGoogle {
   width: 100%;
 }
-.contactUs__mapGoogle iframe{
+.contactUs__mapGoogle iframe {
   border-radius: 10px;
-  
+}
+
+@media screen and (max-width: 1000px) {
+  .contactUs {
+    padding: 0 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .contactUs__image {
+    display: flex;
+    flex-direction: column;
+  }
+  .contactUs__mapGoogle {
+    height: 300px;
+  }
 }

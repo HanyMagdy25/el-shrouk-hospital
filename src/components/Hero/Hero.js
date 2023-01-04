@@ -2,11 +2,11 @@ import React from "react";
 import Navbar from "../Navbar/Navbar";
 import "./Hero.css"
 import HeroContent from "./HeroContent/HeroContent";
-function Hero() {
+function Hero({setLanguage}) {
   return (
     <div className="hero-section">
       <div className="container">
-        <Navbar/>
+        <Navbar setLanguage={setLanguage}/>
         <HeroContent/> 
       </div>
     </div>

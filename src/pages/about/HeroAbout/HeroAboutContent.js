@@ -2,7 +2,7 @@ import React from "react";
 
 function HeroAboutContent() {
   return (
-    <div className="flex-center flex-column heroAboutContent">
+    <div className="flex-center flex-column heroAboutContent px-5 lg:px-0">
       <div className="flex-center">
         <div className="main__title-div">
           <h2 className="main__title">About us</h2>

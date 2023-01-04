@@ -145,8 +145,6 @@ export const equipmentData = [
       "Intensive care ambulance",
       "8 highly equipped emergency beds",
       "Intensive care ambulance",
-      "8 highly equipped emergency beds",
-      "Intensive care ambulance",
     ],
   },
   {

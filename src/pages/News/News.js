@@ -5,11 +5,11 @@ import EventsNews from './EventsNews/EventsNews'
 import HeroNews from './HeroNews/HeroNews'
 import "./News.css"
 
-function News() {
+function News({setLanguage,language}) {
   return (
     <div>
-        <HeroNews/>
-        <EventsNews/>
+        <HeroNews setLanguage={setLanguage}/>
+        <EventsNews language={language}/>
         <Gallery/>
         <ContactUs/>
     </div>

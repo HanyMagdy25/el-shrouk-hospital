@@ -121,7 +121,12 @@ p {
   justify-content: center;
   align-items: center;
 }
-
+option{
+  background: var(--color-bg);
+  color: var(--color-title);
+  font-size: 18px;
+  font-weight: 600;
+}
 @media screen and (max-width: 768px) {
   .main__title {
     font-size: 26px;
@@ -140,5 +145,21 @@ p {
   .main__title-div::after {
     top: -65%;
     margin: 0 15px;
+  }
+  .btn-outline,
+  .btn-fill {
+    min-width: 140px;
+    padding: 8px 10px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 50px;
+    box-shadow: 0px 3px 6px #00000029;
+    transition: all 0.1s;
+  }
+}
+@media screen and (max-width: 370px) {
+  .btn-outline,
+  .btn-fill {
+    font-size: 11px;
   }
 }

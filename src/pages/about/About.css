@@ -81,3 +81,22 @@
   color: #193569;
   font-size: 18px;
 }
+
+
+@media screen and (max-width: 1000px) {
+  .aboutVisionCard {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .aboutVision {
+    padding: 0 20px;
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .aboutVisionCard__div__content p {
+    color: #193569;
+    font-size: 16px;
+    line-height: 1.2;
+  }
+}

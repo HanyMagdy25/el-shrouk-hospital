@@ -34,7 +34,7 @@ function AboutVisionCard({item}) {
       <div className="aboutVisionCard__div__content">
         <h3>{item.title}</h3>
         <p>
-          {truncate(item.description, 150)}
+          {truncate(item.description, 140)}
         </p>
       </div>
     </div>

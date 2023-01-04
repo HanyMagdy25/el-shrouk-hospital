@@ -5,16 +5,16 @@ import HeroNewsInside from "./HeroNewsInside/HeroNewsInside";
 import NewsInsideMainContent from "./HeroNewsInside/NewsInsideMainContent";
 import RelatedNews from "./HeroNewsInside/RelatedNews";
 import "./NewsInside.css";
-function NewsInside() {
+function NewsInside({setLanguage,language}) {
   const param = useParams();
   const oneNews = newsData.find((a) => a.id === parseInt(param.id));
   console.log("5", oneNews);
   console.log("param", param);
   return (
     <div>
-      <HeroNewsInside oneNews={oneNews} />
+      <HeroNewsInside oneNews={oneNews}  setLanguage={setLanguage}/>
       <NewsInsideMainContent oneNews={oneNews} />
-      <RelatedNews/>
+      <RelatedNews language={language}/>
       <ContactUs/>
     </div>
   );

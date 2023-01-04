@@ -9,6 +9,7 @@ import "swiper/css/navigation";
 // import required modules
 import { Pagination, Navigation } from "swiper";
 import { galleryDataSwiper } from "../../../utils/data";
+import { useWindowInner } from "../../../hooks/useWindowInner";
 
 function GallerySwiper() {
   const [selectedImage, setSelectedImage] = useState(0);
@@ -19,6 +20,7 @@ function GallerySwiper() {
   //     return a.image;
   //   });
   // console.log("oneSwiper", oneSwiper);
+  const { isMobile } = useWindowInner();
   return (
     <div className="mt-5">
       <div className="gallerySwiper__bigImage">
@@ -30,7 +32,7 @@ function GallerySwiper() {
       </div>
       <div className="gallerySwiper__div mt-5 mb-20">
         <Swiper
-          slidesPerView={8}
+          slidesPerView={isMobile ? 3 : 8}
           spaceBetween={12}
           slidesPerGroup={1}
           loop={true}

@@ -20,23 +20,23 @@
   /* width: 100%;
   height: 100%; */
 }
-.medicalServices__equipment{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 10%;
+.medicalServices__equipment {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10%;
 }
-.medicalServices__loaction{
-    margin-top: 60px;
+.medicalServices__loaction {
+  margin-top: 60px;
 }
-.medicalServices__mapImage{
-    width: 100%;
-    height: 500px;
-    cursor: pointer;
-    margin-top: 50px;
+.medicalServices__mapImage {
+  width: 100%;
+  height: 500px;
+  cursor: pointer;
+  margin-top: 50px;
 }
-.medicalServices__mapImage img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.medicalServices__mapImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

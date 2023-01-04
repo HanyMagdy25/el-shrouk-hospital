@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { BsGlobe2 } from "react-icons/bs";
 import "./Navbar.css";
 import logo from "../../assets/logo.png";
 import { navTitle } from "../../utils/data";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
-const Navbar = () => {
+const Navbar = ({ setLanguage }) => {
   const [click, setClick] = useState(false);
 
   const handleClick = () => setClick(!click);
@@ -15,7 +16,7 @@ const Navbar = () => {
       <nav className="navbar">
         <div className="navbar-container">
           <Link to="/" className="navbar-logo">
-            <img src={logo} alt="logo"/>
+            <img src={logo} alt="logo" />
           </Link>
 
           <div className="menu-icon" onClick={handleClick}>
@@ -36,6 +37,18 @@ const Navbar = () => {
                 </NavLink>
               </li>
             ))}
+            <div className="flex items-center navbar__lang">
+              <BsGlobe2 />
+              <select
+                onChange={(e) => {
+                  handleClick();
+                  setLanguage(e.target.value);
+                }}
+              >
+                <option value="en">EN</option>
+                <option value="ar">AR</option>
+              </select>
+            </div>
           </ul>
         </div>
       </nav>

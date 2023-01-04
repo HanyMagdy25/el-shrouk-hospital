@@ -1,17 +1,10 @@
 import React, { useState } from "react";
 import "./ContactUs.css";
-import map2 from "../../assets/map2.png";
 import facebookIcon from "../../assets/facebook.png";
 import linkedinIcon from "../../assets/linkedin.png";
 function ContactUs() {
   const [whatsapp, setWhatsapp] = useState("01112994482");
   const [phone, setPhone] = useState("01112994482");
-  // To Open Google Map With lat and lng
-  const lat = "30.089726";
-  const lng = "31.638698";
-  const showInMapClicked = () => {
-    window.open("https://maps.google.com?q=" + lat + "," + lng);
-  };
   return (
     <div className="contactUs mb-20">
       <div className="container">
@@ -23,7 +16,7 @@ function ContactUs() {
         <div className="contactUs__image flex ">
           <div className="contactUs__image__content rounded-xl bg-white p-6 ">
             <h3>Contact</h3>
-            <h4>
+            <h4 className="flex items-center">
               Hotline :{" "}
               <span className="contactUs__phone">
                 <a href={`tel:${phone}`} target="_blank" rel="noreferrer">
@@ -31,10 +24,10 @@ function ContactUs() {
                 </a>
               </span>
             </h4>
-            <h4>
+            <h4 className="flex items-center">
               Email :<span>tayseer@elshroukhospital.com</span>
             </h4>
-            <h4>
+            <h4 className="flex items-center">
               WhatsApp :
               <span>
                 <a
@@ -75,13 +68,13 @@ function ContactUs() {
               width="100%"
               height="100%"
               style={{ border: 0 }}
-              allowfullscreen=""
+              allowFullScreen=""
               loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
+              referrerPolicy="no-referrer-when-downgrade"
               title="el-shrouk-hospital"
             ></iframe>
           </div>
-          {/* <img src={map2} alt="map" onClick={showInMapClicked} className="rounded-xl py-3" /> */}
+         
         </div>
       </div>
     </div>

@@ -1,6 +1,6 @@
 function HeroNewsInsideContent({ oneNews }) {
   return (
-    <div className="heroNewsInsideContent mt-10">
+    <div className="heroNewsInsideContent mt-10 px-5 lg:px-0">
       <p className="font-bold text-lg">
         Al Shorouk Specialised Hospital (Swiss) is one of the newly established
         medical facilities in the Arab Republic of Egypt, we belongs to Swiss

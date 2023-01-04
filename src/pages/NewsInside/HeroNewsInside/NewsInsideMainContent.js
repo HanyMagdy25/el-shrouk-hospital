@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 
-function NewsInsideMainContent({ oneNews }) {
+function NewsInsideMainContent({ oneNews}) {
   const [selectedImage, setSelectedImage] = useState(0);
   return (
-    <div className="newsInsideMainContent container">
+    <div className="newsInsideMainContent container px-5 lg:px-0">
       <div className="heroNewsInsideContent__images mt-6">
         <div className="heroNewsInsideContent__images__selected">
           <img
             src={oneNews?.image[selectedImage]}
             alt={oneNews.title}
-            className="image__mainStyle"
+            className="image__mainStyle md:rounded-lg"
           />
         </div>
         <div className="heroNewsInsideContent__images__right">
@@ -25,7 +25,7 @@ function NewsInsideMainContent({ oneNews }) {
         </div>
       </div>
       <div className="newsInsideMainContent__allParagraph">
-        <div className="flec space-x-4 mt-4">
+        <div className="flex gap-4 mt-4">
             <span>By : {oneNews.by}</span>
             <span>{oneNews.date}</span>
             <span></span>

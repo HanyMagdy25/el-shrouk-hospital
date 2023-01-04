@@ -16,7 +16,7 @@ function Gallery() {
         Hospitals Management Company, which aspires to gain the confidence of
         all its clients, including individuals.
       </p>
-      <div className="flex gallery__hover__div">
+      <div className="flex gallery__hover__div px-5 lg:px-0" >
         {galleryData.map((item, index) => (
           <GalleryCard key={index} item={item} />
         ))}
@@ -34,7 +34,7 @@ function Gallery() {
         <button className="btn-fill notActive">Dental unit</button>
         <button className="btn-fill notActive">Neurology unit</button>
       </div>
-      <div>
+      <div className="px-5 lg:px-0">
         <GallerySwiper />
       </div>
     </div>
