@@ -16,7 +16,11 @@ function HeroAboutContent() {
         international bodies, as it is keen to provide medical and treatment
         services in all of its medical departments.
       </p>
-      <button className="btn-fill">Meet Our Team</button>
+      <a href="#team">
+        <button className="btn-fill">
+          Meet Our Team
+        </button>
+      </a>
     </div>
   );
 }

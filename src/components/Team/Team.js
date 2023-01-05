@@ -38,7 +38,7 @@ function Team({ language }) {
       });
   }, [language]);
   return (
-    <div className="team container">
+    <div id="team" className="team container">
       <div className="flex-center mb-20">
         <div className="main__title-div">
           <h2 className="main__title">

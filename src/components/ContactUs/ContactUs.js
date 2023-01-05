@@ -19,7 +19,7 @@ function ContactUs({ contact_data, language }) {
           </div>
         </div>
         <div className="contactUs__image flex ">
-          <div className="contactUs__image__content rounded-xl bg-white p-6 ">
+          <div className="contactUs__image__content rounded-3xl bg-white p-6 ">
             <h3>
             {language === "en" ? "Contact" : "التواصل"}
             </h3>
@@ -65,7 +65,7 @@ function ContactUs({ contact_data, language }) {
               </a>
             </div>
           </div>
-          <div className="contactUs__mapGoogle rounded-xl py-3">
+          <div className="contactUs__mapGoogle  py-3">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d109436.06621575782!2d31.362252800000004!3d31.0018048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2seg!4v1672653802035!5m2!1sen!2seg"
               width="100%"
