@@ -2,7 +2,10 @@ import React, { useState } from "react";
 import "./ContactUs.css";
 import facebookIcon from "../../assets/facebook.png";
 import linkedinIcon from "../../assets/linkedin.png";
-function ContactUs() {
+import instaIcon from "../../assets/Insta.png";
+import youtubeIcon from "../../assets/youtube.png";
+function ContactUs({ contact_data, language }) {
+  console.log("contact_data", contact_data);
   const [whatsapp, setWhatsapp] = useState("01112994482");
   const [phone, setPhone] = useState("01112994482");
   return (
@@ -10,55 +13,55 @@ function ContactUs() {
       <div className="container">
         <div className="flex-center mb-14">
           <div className="main__title-div">
-            <h2 className="main__title">Contact Us</h2>
+            <h2 className="main__title">
+              {language === "en" ? "Contact Us" : "تواصل معنا"}
+            </h2>
           </div>
         </div>
         <div className="contactUs__image flex ">
           <div className="contactUs__image__content rounded-xl bg-white p-6 ">
-            <h3>Contact</h3>
-            <h4 className="flex items-center">
-              Hotline :{" "}
+            <h3>
+            {language === "en" ? "Contact" : "التواصل"}
+            </h3>
+            <h4 className="flex items-center gap-1">
+              {language === "en" ? "Hotline" : "الخط الساخن"} :
               <span className="contactUs__phone">
                 <a href={`tel:${phone}`} target="_blank" rel="noreferrer">
-                  17121
+                  {contact_data.hotLine}
                 </a>
               </span>
             </h4>
-            <h4 className="flex items-center">
-              Email :<span>tayseer@elshroukhospital.com</span>
+            <h4 className="flex items-center gap-1">
+              {language === "en" ? "Email" : "البريد الالكترونى"} :
+              <span>{contact_data.email}</span>
             </h4>
-            <h4 className="flex items-center">
-              WhatsApp :
+            <h4 className="flex items-center gap-1">
+              {language === "en" ? "WhatsApp" : "واتساب"} :
               <span>
                 <a
                   href={`https://wa.me/${whatsapp}`}
                   target="_blank"
                   rel="noreferrer"
                 >
-                  01234567890
+                  {contact_data.whatsapp}
                 </a>
               </span>
             </h4>
-            <h3>Location</h3>
-            <p>
-              Buiding no.234 north teseen 5th settlements New Cairo، Cairo
-              Governorate 11835
-            </p>
-            <h3>Social Media</h3>
+            <h3>{language === "en" ? "Location" : "العنوان"}</h3>
+            <p>{contact_data.address}</p>
+            <h3 className="mt-2">{language === "en" ? "Social Media" : " التواصل الاجتماعى"}</h3>
             <div className="flex space-x-1">
-              <a
-                href="https://www.google.com/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img src={facebookIcon} alt="" />
+              <a href={contact_data.facebook} target="_blank" rel="noreferrer">
+                <img src={facebookIcon} alt="facebookIcon" />
               </a>
-              <a
-                href="https://www.google.com/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img src={linkedinIcon} alt="" />
+              <a href={contact_data.linkedin} target="_blank" rel="noreferrer">
+                <img src={linkedinIcon} alt="linkedinIcon" />
+              </a>
+              <a href={contact_data.instagram} target="_blank" rel="noreferrer">
+                <img src={instaIcon} alt="instaIcon" />
+              </a>
+              <a href={contact_data.youtube} target="_blank" rel="noreferrer">
+                <img src={youtubeIcon} alt="youtubeIcon" />
               </a>
             </div>
           </div>
@@ -74,7 +77,6 @@ function ContactUs() {
               title="el-shrouk-hospital"
             ></iframe>
           </div>
-         
         </div>
       </div>
     </div>

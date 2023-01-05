@@ -8,7 +8,7 @@ function EventsNews({ language }) {
     <div className="eventsNews container flex px-5 lg:px-0">
       <div className="eventsNews__main relative overflow-hidden ">
         <img src={news2} alt="event" className="image__mainStyle" />
-        <div className="eventsNews__main__content absolute bottom-0 z-10 w-full p-4 ">
+        <div className="eventsNews__main__content absolute bottom-0 z-10 w-full p-2 md:p-4 ">
           <h3>
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed di…
           </h3>
@@ -18,7 +18,7 @@ function EventsNews({ language }) {
               <span>12/03/2022 12:30 AM</span>
             </div>
             <button className="flex items-center text-xs font-bold gap-2">
-              Read More
+            {language === "en" ? "Read More" : "اقرأ المزيد"}
               {language === "en" ? (
                 <HiArrowNarrowRight className="text-lg " />
               ) : (

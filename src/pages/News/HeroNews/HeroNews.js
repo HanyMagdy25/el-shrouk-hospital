@@ -1,12 +1,12 @@
 import React from "react";
 import Navbar from "../../../components/Navbar/Navbar";
 
-function HeroNews({setLanguage}) {
+function HeroNews({setLanguage , language}) {
   return (
-    <div className="hero-section">
+    <div className="hero-section heroNews__customHeight">
       <div className="container">
-        <Navbar setLanguage={setLanguage} />
-        <div className="flex-center flex-column heroAboutContent">
+        <Navbar setLanguage={setLanguage} language={language} />
+        <div className="flex-center flex-column heroAboutContent px-5 lg:px-0">
           <div className="flex-center">
             <div className="main__title-div">
               <h2 className="main__title">News & Events</h2>

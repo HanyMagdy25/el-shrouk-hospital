@@ -1,6 +1,7 @@
 import React from "react";
 import "./ServiceCard.css";
 import { HiArrowNarrowRight, HiArrowNarrowLeft } from "react-icons/hi";
+import { Link } from "react-router-dom";
 // Dummy Data
 const url_main = "https://el-shrouk-hospital-dashboard.technomasrsystems.com";
 function ServiceCard({ item, language }) {
@@ -14,19 +15,19 @@ function ServiceCard({ item, language }) {
         alt={item.title}
       />
       <h3 className="serviceCard__title">{item.title}</h3>
-      {/* <p className="serviceCard__description">{item.description}</p> */}
-      <div
-        className="serviceCard__description"
-        dangerouslySetInnerHTML={{ __html: truncate(item.description, 110) }}
-      />
-      <button className="serviceCard__btn">
-        Read More{" "}
-        {language === "en" ? (
-          <HiArrowNarrowRight className="serviceCard__btn__icon" />
-        ) : (
-          <HiArrowNarrowLeft className="serviceCard__btn__icon" />
-        )}
-      </button>
+      <p className="serviceCard__description">
+        {truncate(item.description, 140)}
+      </p>
+      <Link to="/services">
+        <button className="serviceCard__btn">
+          {language === "en" ? "Read More" : "اقرأ المزيد"}
+          {language === "en" ? (
+            <HiArrowNarrowRight className="serviceCard__btn__icon" />
+          ) : (
+            <HiArrowNarrowLeft className="serviceCard__btn__icon" />
+          )}
+        </button>
+      </Link>
     </div>
   );
 }

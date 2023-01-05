@@ -23,12 +23,12 @@ function EventsNewsCard({ item, type, language }) {
           <span>By: {item.by}</span>
           <span>{item.date}</span>
         </div>
-        <h2 className="mt-1">{truncate(item.title, 50)}</h2>
-        <p className="text-xs mt-1">{truncate(item.description, 80)}</p>
+        <h2 className=" mt-1">{truncate(item.title, 50)}</h2>
+        <p className="text-xs mt-1">{truncate(item.description, 75)}</p>
         <div className="flex justify-end">
           <Link to={`/news/${item.id}`}>
-            <button className="flex items-center text-sm font-semibold gap-1">
-              Read More
+            <button className="flex items-center text-xs md:text-sm font-semibold gap-1 ">
+              {language === "en" ? "Read More" : "اقرأ المزيد"}
               {language === "en" ? (
                 <HiArrowNarrowRight className="text-lg" />
               ) : (

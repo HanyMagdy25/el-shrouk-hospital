@@ -1,8 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./WeCare.css";
 import weCareImage from "../../assets/wecare.png";
 import { weCareData } from "../../utils/data";
-function WeCare() {
+
+const url_main = "https://el-shrouk-hospital-dashboard.technomasrsystems.com";
+
+function WeCare({ language }) {
+  const [loading, setLoading] = useState(true);
+  const [weCareData, setWecareData] = useState([]);
+  useEffect(() => {
+    fetch(`${url_main}/api/weCares`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        lang: language,
+      },
+    })
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        setLoading(false);
+        setWecareData(data);
+        // console.log("weCare", data);
+        // setSettings(data.data);
+      });
+  }, [language]);
   return (
     <div className="weCare">
       <div className="container weCare__container">
@@ -21,11 +44,18 @@ function WeCare() {
               <div key={index} className="weCare__right__card">
                 <div className="weCare__right__card__img ">
                   <div>
-                    <img src={item.icon} alt={item.title} />
+                    <img
+                      src={`${url_main}/uploads/weCares/${item.id}/${item.icon}`}
+                      alt={item.title}
+                    />
                   </div>
                 </div>
                 <div className="weCare__right__card__content">
                   <h4>{item.title}</h4>
+                  {/* <div
+                    className=""
+                    dangerouslySetInnerHTML={{ __html: item.description }}
+                  /> */}
                   <p>{item.description}</p>
                 </div>
               </div>

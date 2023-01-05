@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { teamData } from "../../utils/data";
 import "./Team.css";
 
@@ -13,14 +13,37 @@ import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper";
 import TeamCard from "./TeamCard";
 import { useWindowInner } from "../../hooks/useWindowInner";
+const url_main = "https://el-shrouk-hospital-dashboard.technomasrsystems.com";
 
-function Team() {
-    const { isMobile } = useWindowInner();
+function Team({ language }) {
+  const { isMobile } = useWindowInner();
+  const [loading, setLoading] = useState(true);
+  const [teamData, setTeamData] = useState([]);
+  useEffect(() => {
+    fetch(`${url_main}/api/ourTeam`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        lang: language,
+      },
+    })
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        setLoading(false);
+        setTeamData(data);
+        // console.log("weCare", data);
+        // setSettings(data.data);
+      });
+  }, [language]);
   return (
     <div className="team container">
       <div className="flex-center mb-20">
         <div className="main__title-div">
-          <h2 className="main__title">Meet Our Team</h2>
+          <h2 className="main__title">
+            {language === "en" ? "Meet Our Team" : "فريق العمل"}
+          </h2>
         </div>
       </div>
       <div className="team__swiper relative px-4">
@@ -39,7 +62,7 @@ function Team() {
         >
           {teamData.map((item, index) => (
             <SwiperSlide key={index}>
-              <TeamCard item={item} />
+              <TeamCard item={item} language={language} />
             </SwiperSlide>
           ))}
         </Swiper>

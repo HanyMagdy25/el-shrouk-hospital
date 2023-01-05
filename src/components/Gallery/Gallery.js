@@ -22,7 +22,7 @@ function Gallery() {
         ))}
       </div>
 
-      <div className="gallery__btns flex mt-24 flex-wrap">
+      <div className="gallery__btns flex mt-24 flex-wrap px-5 lg:px-0 gap-3">
         <button className="btn-fill">Medical Services</button>
         <button className="btn-fill notActive">Medical Services</button>
         <button className="btn-fill notActive">cosmetic & laser unit</button>

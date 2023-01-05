@@ -5,7 +5,6 @@ import ServecisSection from "../../components/ServecisSection/ServecisSection";
 import WeCare from "../../components/WeCare/WeCare";
 import godownIcon from "../../assets/godown.png"
 import Team from "../../components/Team/Team";
-import ContactUs from "../../components/ContactUs/ContactUs";
 
 const url_main = "https://el-shrouk-hospital-dashboard.technomasrsystems.com"
 
@@ -33,15 +32,14 @@ function Home({language,setLanguage}) {
   }, [language]);
   return (
     <div>
-      <Hero setLanguage={setLanguage}/>
+      <Hero setLanguage={setLanguage} language={language}/>
       <div className="container flex justify-center items-center mt-10  lg:mt-20"  >
         <a href="#services"> <img src={godownIcon} alt="icon" loading="lazy" /></a>
       </div>
       <ServecisSection language={language} servicesData={servicesData}/>
-      <WeCare/>
+      <WeCare language={language}/>
       <News/>
-      <Team/>
-      <ContactUs/>
+      <Team language={language}/>
     </div>
   );
 }

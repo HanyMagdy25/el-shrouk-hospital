@@ -1,7 +1,9 @@
 .eventsNews {
   height: 500px;
-  margin-top: -150px;
   gap: 15px;
+}
+.heroNews__customHeight {
+  height: 380px;
 }
 .eventsNews__main {
   width: 60%;
@@ -117,5 +119,12 @@
 @media screen and (max-width: 768px) {
   .related__threeCards {
     width: 100%;
+  }
+  .eventsNews__main__content h3 {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .eventsNewsCard__content h2 {
+    font-size: 13px;
   }
 }

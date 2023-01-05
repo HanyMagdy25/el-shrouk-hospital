@@ -5,7 +5,6 @@ import MedicalCard from "./MedicalCard/MedicalCard";
 import MedicalCardToRead from "./MedicalCardToRead/MedicalCardToRead";
 import map1 from "../../assets/map1.png";
 import "./MedicalServices.css";
-import ContactUs from "../../components/ContactUs/ContactUs";
 function MedicalServices({setLanguage ,language}) {
   const [toggle, setToggle] = useState(1);
   const toggleTap = (index) => {
@@ -20,8 +19,8 @@ function MedicalServices({setLanguage ,language}) {
   };
   return (
     <div className="medicalServices">
-      <HeroAbout setLanguage={setLanguage}/>
-      <div className="medicalServices__container container mt-7 lg:mt-0 px-5 lg:px-0">
+      <HeroAbout setLanguage={setLanguage} language={language}/>
+      <div className="medicalServices__container mt-10 container px-5 lg:px-0">
         <div className="flex-center">
           <div className="main__title-div">
             <h2 className="main__title">Our Medical Services</h2>
@@ -85,7 +84,6 @@ function MedicalServices({setLanguage ,language}) {
           </div>
         </div>
       </div>
-      <ContactUs/>
     </div>
   );
 }

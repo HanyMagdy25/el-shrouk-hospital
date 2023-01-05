@@ -23,19 +23,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
-}
-@font-face {
-  font-family: "UbuntuArabic-Bold";
-  src: url("../src/assets/fonts/UbuntuArabic-Bold.eot");
-  src: url("../src/assets/fonts/UbuntuArabic-Bold.eot?#iefix")
-      format("embedded-opentype"),
-    url("../src/assets/fonts/UbuntuArabic-Bold.woff2") format("woff2"),
-    url("../src/assets/fonts/UbuntuArabic-Bold.woff") format("woff"),
-    url("../src/assets/fonts/UbuntuArabic-Bold.ttf") format("truetype"),
-    url("../src/assets/fonts/UbuntuArabic-Bold.svg#svgFontName") format("svg");
-  font-display: swap;
-  font-style: normal;
+  /* font-family: "Montserrat", sans-serif; */
 }
 html {
   scroll-behavior: smooth;
@@ -45,6 +33,7 @@ body {
   margin: 0;
   background: var(--color-bg);
   overflow-x: hidden;
+  font-family: "Montserrat", sans-serif;
   /* direction: rtl; */
 }
 /* Some Shortcuts */

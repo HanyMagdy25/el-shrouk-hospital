@@ -12,13 +12,13 @@ const visionData = [
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diaorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diaorem ipsum dolor sit amet, consetetur sadipscing elitr, sed dia",
   },
   {
-    title: "Our Values",
+    title: "Our Mission",
     image: vision2,
     description:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diaorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diaorem ipsum dolor sit amet, consetetur sadipscing elitr, sed dia",
   },
   {
-    title: "Our Values",
+    title: "Our Vision",
     image: vision3,
     description:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diaorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diaorem ipsum dolor sit amet, consetetur sadipscing elitr, sed dia",

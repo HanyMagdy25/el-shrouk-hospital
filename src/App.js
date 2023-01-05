@@ -8,11 +8,15 @@ import Home from "./pages/Home/Home";
 import MedicalServices from "./pages/MedicalServices/MedicalServices";
 import News from "./pages/News/News";
 import NewsInside from "./pages/NewsInside/NewsInside";
+import ContactUs from "./components/ContactUs/ContactUs";
+import ContactUsPage from "./pages/ContactUsPage/ContactUsPage";
 
-const url_main = "https://el-shrouk-hospital-dashboard.technomasrsystems.com"
+const url_main = "https://el-shrouk-hospital-dashboard.technomasrsystems.com";
 
 function App() {
   const [loading, setLoading] = useState(true);
+  const [settings, setSettings] = useState([]);
+  const [contact_data, setContact_data] = useState({});
   const [language, setLanguage] = useState("en");
   function ScrollToTopAfterChangePage() {
     const { pathname } = useLocation();
@@ -27,13 +31,17 @@ function App() {
     document.documentElement.setAttribute("lang", language);
     if (language === "ar") {
       document.getElementsByTagName("body")[0].style.direction = "rtl";
+      document.getElementsByTagName("body")[0].style.fontFamily =
+        "'Noto Kufi Arabic', sans-serif";
     } else {
       document.getElementsByTagName("body")[0].style.direction = "ltr";
+      document.getElementsByTagName("body")[0].style.fontFamily =
+        "'Montserrat', sans-serif";
     }
   }, [language]);
 
   useEffect(() => {
-    fetch(`${url_main}/api/services`, {
+    fetch(`${url_main}/api/settings`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -45,9 +53,9 @@ function App() {
       })
       .then((data) => {
         setLoading(false);
-        console.log("33",data)
-        // setSettings(data.data);
-    
+        setSettings(data);
+        setContact_data(data?.data[0]?.contact_data);
+        console.log("contact_data", data?.data[0]?.contact_data);
       });
   }, [language]);
 
@@ -60,7 +68,10 @@ function App() {
             path="/"
             element={<Home language={language} setLanguage={setLanguage} />}
           />
-          <Route path="/about" element={<About setLanguage={setLanguage} />} />
+          <Route
+            path="/about"
+            element={<About language={language} setLanguage={setLanguage} />}
+          />
           <Route
             path="/services"
             element={
@@ -77,8 +88,15 @@ function App() {
               <NewsInside language={language} setLanguage={setLanguage} />
             }
           />
+          <Route
+            path="/contact"
+            element={
+              <ContactUsPage language={language} setLanguage={setLanguage} />
+            }
+          />
         </Routes>
         <ScrollToTop smooth color="white" width="32" height="50" />
+        <ContactUs contact_data={contact_data} language={language} />
         <Footer />
       </BrowserRouter>
     </div>

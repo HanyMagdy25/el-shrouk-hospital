@@ -6,7 +6,7 @@ import logo from "../../assets/logo.png";
 import { navTitle } from "../../utils/data";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
-const Navbar = ({ setLanguage }) => {
+const Navbar = ({ setLanguage, language }) => {
   const [click, setClick] = useState(false);
 
   const handleClick = () => setClick(!click);
@@ -33,7 +33,7 @@ const Navbar = ({ setLanguage }) => {
                     handleClick();
                   }}
                 >
-                  {item.title}
+                  {language === "en" ? item.title : item.titleArabic}
                 </NavLink>
               </li>
             ))}
