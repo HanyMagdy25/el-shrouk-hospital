@@ -36,13 +36,27 @@
   color: #193569;
   font-weight: 700;
   font-size: 25px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+.medicalCard__content p {
+  color: #193569;
+  font-weight: 600;
+  font-size: 14px;
 }
 .medicalCard__content ul li {
-  content: "\2022";
   color: #193569;
   font-size: 14px;
   font-weight: 600;
   margin-top: 8px;
+}
+.medicalCard__content p::before {
+  content: "\2022";
+  color: #9db0ff;
+  font-weight: 900;
+  display: inline-block;
+  width: 1rem;
+  margin-left: 0em;
 }
 .medicalCard__content ul li::before {
   content: "\2022";

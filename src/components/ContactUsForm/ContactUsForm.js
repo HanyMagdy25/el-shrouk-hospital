@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "./ContactUsForm.css";
 
-const url_main = "";
+const url_main =
+  "https://el-shrouk-hospital-dashboard.technomasrsystems.com/api";
 function ContactUsForm({ language }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -50,27 +51,39 @@ function ContactUsForm({ language }) {
           <input
             type="text"
             placeholder={language === "en" ? "Name" : "الأسم"}
+            value={name}
             onChange={(e) => setName(e.target.value)}
           />
           <input
             type="email"
             placeholder={language === "en" ? "Email" : "البريد الالكترونى"}
+            value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
           <input
             type="tel"
             placeholder={language === "en" ? "Phone" : "رقم الهاتف"}
+            value={phone}
             onChange={(e) => setPhone(e.target.value)}
           />
           <textarea
             placeholder={language === "en" ? "Message" : "رسالتك"}
+            value={text}
             onChange={(e) => setText(e.target.value)}
           />
           <button type="submit" className="btn-fill mt-2">
             SUBMIT
           </button>
-          {done === "success" && <p className="contact__done">Sent</p>}
-          {done === "faild" && <p className="contact__done">Failed to send</p>}
+          {done === "success" && (
+            <p className="contact__done mt-2">
+              {language === "en" ? "Sent Successfully" : "تم الارسال بنجاح"}
+            </p>
+          )}
+          {done === "faild" && (
+            <p className="contact__done mt-2">
+              {language === "en" ? "Failed to send" : "لم يتم الارسال"}
+            </p>
+          )}
         </form>
       </div>
     </div>

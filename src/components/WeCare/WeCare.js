@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./WeCare.css";
-import weCareImage from "../../assets/wecare.png";
-import { weCareData } from "../../utils/data";
 
 const url_main = "https://el-shrouk-hospital-dashboard.technomasrsystems.com";
 
@@ -22,25 +20,31 @@ function WeCare({ language }) {
       .then((data) => {
         setLoading(false);
         setWecareData(data);
-        // console.log("weCare", data);
+        console.log("weCare", data);
         // setSettings(data.data);
       });
   }, [language]);
+  
   return (
     <div className="weCare">
       <div className="container weCare__container">
         <div className="weCare__left">
-          <img src={weCareImage} alt="weCare" loading="lazy" />
+          <img
+            src={weCareData?.StaticWeCareData?.weCareImage}
+            alt="weCare"
+            loading="lazy"
+          />
           <div className="weCare__left__title">
             <h2>WE CARE</h2>
           </div>
         </div>
         <div className="weCare__right">
           <h2 className="weCare__right__title">
-            What makes <span>SHOUROK</span> Specialised Hospital Unique ?
+            {weCareData?.StaticWeCareData?.weCareTitle}
+            {/* What makes <span>SHOUROK</span> Specialised Hospital Unique ? */}
           </h2>
           <div className="weCare__right__allCards">
-            {weCareData.map((item, index) => (
+            {weCareData?.staticIcons?.map((item, index) => (
               <div key={index} className="weCare__right__card">
                 <div className="weCare__right__card__img ">
                   <div>

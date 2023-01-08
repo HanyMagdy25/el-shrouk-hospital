@@ -1,13 +1,9 @@
-import React, { useState } from "react";
 import "./ContactUs.css";
 import facebookIcon from "../../assets/facebook.png";
 import linkedinIcon from "../../assets/linkedin.png";
 import instaIcon from "../../assets/Insta.png";
 import youtubeIcon from "../../assets/youtube.png";
 function ContactUs({ contact_data, language }) {
-  console.log("contact_data", contact_data);
-  const [whatsapp, setWhatsapp] = useState("01112994482");
-  const [phone, setPhone] = useState("01112994482");
   return (
     <div className="contactUs mb-20">
       <div className="container">
@@ -26,7 +22,7 @@ function ContactUs({ contact_data, language }) {
             <h4 className="flex items-center gap-1">
               {language === "en" ? "Hotline" : "الخط الساخن"} :
               <span className="contactUs__phone">
-                <a href={`tel:${phone}`} target="_blank" rel="noreferrer">
+                <a href={`tel:${contact_data.hotLine}`} target="_blank" rel="noreferrer">
                   {contact_data.hotLine}
                 </a>
               </span>
@@ -39,7 +35,7 @@ function ContactUs({ contact_data, language }) {
               {language === "en" ? "WhatsApp" : "واتساب"} :
               <span>
                 <a
-                  href={`https://wa.me/${whatsapp}`}
+                  href={`https://wa.me/${contact_data.whatsapp}`}
                   target="_blank"
                   rel="noreferrer"
                 >
