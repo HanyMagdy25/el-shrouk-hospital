@@ -3,7 +3,8 @@ import news2 from "../../../assets/news/news2.jpg";
 import { HiArrowNarrowRight, HiArrowNarrowLeft } from "react-icons/hi";
 import { newsData } from "../../../utils/data";
 import EventsNewsCard from "./EventsNewsCard";
-function EventsNews({ language }) {
+const url_main = "https://el-shrouk-hospital-dashboard.technomasrsystems.com";
+function EventsNews({ language,events }) {
   return (
     <div className="eventsNews container flex px-5 lg:px-0">
       <div className="eventsNews__main relative overflow-hidden ">
@@ -31,7 +32,7 @@ function EventsNews({ language }) {
       </div>
       <div className="eventsNews__right">
         {newsData.map((item, index) => (
-          <EventsNewsCard key={index} item={item} language={language} />
+          <EventsNewsCard key={index} item={item} language={language}/>
         ))}
       </div>
     </div>

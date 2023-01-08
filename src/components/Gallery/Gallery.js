@@ -1,8 +1,31 @@
-import { galleryData, galleryDataSwiper } from "../../utils/data";
+import { useEffect, useState } from "react";
+// import { galleryData, galleryDataSwiper } from "../../utils/data";
 import "./Gallery.css";
 import GalleryCard from "./GalleryCard/GalleryCard";
 import GallerySwiper from "./GallerySwiper/GallerySwiper";
-function Gallery() {
+const url_main = "https://el-shrouk-hospital-dashboard.technomasrsystems.com";
+function Gallery({ language }) {
+  const [galleryBtns, setGalleryBtns] = useState([]);
+  const [toggle, setToggle] = useState(1);
+  useEffect(() => {
+    fetch(`${url_main}/api/gallaryMedia`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        lang: language,
+      },
+    })
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        setGalleryBtns(data);
+        // console.log("galleryBtns", data);
+      });
+  }, [language]);
+  const toggleTap = (index) => {
+    setToggle(index);
+  };
   return (
     <div className="gallery container mt-20">
       <div className="flex-center">
@@ -16,26 +39,25 @@ function Gallery() {
         Hospitals Management Company, which aspires to gain the confidence of
         all its clients, including individuals.
       </p>
-      <div className="flex gallery__hover__div px-5 lg:px-0" >
-        {galleryData.map((item, index) => (
+      <div className="flex gallery__hover__div px-5 lg:px-0">
+        {galleryBtns?.slice(0, 8)?.map((item, index) => (
           <GalleryCard key={index} item={item} />
         ))}
       </div>
 
       <div className="gallery__btns flex mt-24 flex-wrap px-5 lg:px-0 gap-3">
-        <button className="btn-fill">Medical Services</button>
-        <button className="btn-fill notActive">Medical Services</button>
-        <button className="btn-fill notActive">cosmetic & laser unit</button>
-        <button className="btn-fill notActive">Operating Rooms</button>
-        <button className="btn-fill notActive">NICU</button>
-        <button className="btn-fill notActive">Building</button>
-        <button className="btn-fill notActive">Emergency Department</button>
-        <button className="btn-fill notActive">physiotherapy</button>
-        <button className="btn-fill notActive">Dental unit</button>
-        <button className="btn-fill notActive">Neurology unit</button>
+        {galleryBtns?.map((item, index) => (
+          <button
+            key={index}
+            onClick={() => toggleTap(item.id)}
+            className={toggle === item.id ? "btn-fill" : "btn-fill notActive"}
+          >
+            {item.categoryName}
+          </button>
+        ))}
       </div>
       <div className="px-5 lg:px-0">
-        <GallerySwiper />
+        <GallerySwiper toggle={toggle} language={language}/>
       </div>
     </div>
   );

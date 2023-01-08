@@ -34,6 +34,16 @@
 .gallerySwiper__bigImage img {
   height: 100%;
   width: 60%;
+  object-fit: contain !important;
+}
+.gallerySwiper__div .swiper-slide{
+  width: 150px !important;
+  height: 150px !important;
+}
+.gallerySwiper__div .swiper-slide img{
+  height: 100% !important;
+    width: 100% !important;
+    object-fit: cover !important;
 }
 
 @media screen and (max-width: 500px) {
@@ -44,4 +54,8 @@
   .gallerySwiper__bigImage {
     height: 400px;
   }
+  .gallerySwiper__div .swiper-slide{
+  width: 100px !important;
+  height: 100px !important;
+}
 }

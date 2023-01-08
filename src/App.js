@@ -77,7 +77,7 @@ function App() {
       .then((data) => {
         setLoadingServices(false);
         setServicesData(data);
-        console.log("setServicesData",data)
+        // console.log("setServicesData",data)
       });
   }, [language]);
 

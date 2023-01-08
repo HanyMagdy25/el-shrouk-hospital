@@ -13,7 +13,7 @@ function ServecisSection({ language, servicesData,loadingServices }) {
           <div className="container">
             <div className="flex-center">
               <div className="main__title-div">
-                <h2 className="main__title">Our Medical Services</h2>
+                <h2 className="main__title">Our Medical Services sdf</h2>
               </div>
             </div>
             <p className="servecisSection__paragraph">

@@ -1,24 +1,22 @@
 import React, { useEffect, useState } from "react";
-// import { servicesData } from "../../utils/data";
-import HeroAbout from "../about/HeroAbout/HeroAbout";
 import MedicalCard from "./MedicalCard/MedicalCard";
 import MedicalCardToRead from "./MedicalCardToRead/MedicalCardToRead";
 import "./MedicalServices.css";
 import Spinner from "../../components/Spinner/Spinner";
+import HeroMedical from "./HeroMedical/HeroMedical";
 const url_main = "https://el-shrouk-hospital-dashboard.technomasrsystems.com";
 
 function MedicalServices({
   setLanguage,
   language,
   servicesData,
-  loadingServices,
+  // loadingServices,
 }) {
   const [toggle, setToggle] = useState(1);
   const [equipments, setEquipments] = useState([]);
   const [loadingEquipments, setLoadingEquipments] = useState(true);
   const toggleTap = (index) => {
     setToggle(index);
-    // console.log("55",toggle)
   };
   // To Open Google Map With lat and lng
   // const lat = "30.089726";
@@ -41,41 +39,22 @@ function MedicalServices({
       .then((data) => {
         setEquipments(data);
         setLoadingEquipments(false);
-        // console.log("equipments", data);
       });
   }, [language]);
 
   return (
     <div className="medicalServices">
-      <HeroAbout setLanguage={setLanguage} language={language} />
+      <HeroMedical
+        setLanguage={setLanguage}
+        language={language}
+        servicesData={servicesData}
+        toggleTap={toggleTap}
+        toggle={toggle}
+      />
       {loadingEquipments ? (
         <Spinner />
       ) : (
         <div className="medicalServices__container mt-10 container px-5 lg:px-0">
-          <div className="flex-center">
-            <div className="main__title-div">
-              <h2 className="main__title">
-                {servicesData?.StaticServicesData?.ServiceTitle}
-              </h2>
-            </div>
-          </div>
-          <p className="medicalServices__paragraph">
-            {servicesData?.StaticServicesData?.ServicesDes}
-          </p>
-          <div className="medicalServices__btns  flex-center">
-            <button
-              className={toggle === 1 ? "btn-fill" : "btn-fill notActive"}
-              onClick={() => toggleTap(1)}
-            >
-              Medical Services
-            </button>
-            <button
-              className={toggle === 2 ? "btn-fill" : "btn-fill notActive"}
-              onClick={() => toggleTap(2)}
-            >
-              Equipment & Units
-            </button>
-          </div>
           <div className="medicalServices__allCards">
             <div
               className={
@@ -105,7 +84,9 @@ function MedicalServices({
           <div className="medicalServices__loaction">
             <div className="flex-center">
               <div className="main__title-div">
-                <h2 className="main__title">Our Medical Services</h2>
+                <h2 className="main__title">
+                  {language === "en" ? "Location" : "موقعنا"}
+                </h2>
               </div>
             </div>
             <div className="medicalServices__mapImage">
