@@ -83,7 +83,7 @@
     height: 300px;
   }
   .heroNewsInsideContent__images__right {
-    height: 340px;
+    max-height: 340px;
     width: 100%;
   }
 }

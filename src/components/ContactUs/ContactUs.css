@@ -50,4 +50,10 @@
   .contactUs__image__content {
     min-width: 100%;
   }
+  .contactUs__image h4 {
+    font-size: 14px;
+  }
+  .contactUs__image h4 span {
+    font-size: 13px;
+  }
 }
