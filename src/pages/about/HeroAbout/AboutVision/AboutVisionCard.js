@@ -12,7 +12,7 @@ function AboutVisionCard({item}) {
       <div className="aboutVisionCard__div__image">
         <div className="aboutVisionCard__div__image__inside flex-center">
           <img
-            src={item.image}
+            src={item.icon}
             alt="icon"
             loading="lazy"
             className="aboutVisionCard__div__image__inside__mainImage"
@@ -34,7 +34,7 @@ function AboutVisionCard({item}) {
       <div className="aboutVisionCard__div__content">
         <h3>{item.title}</h3>
         <p>
-          {truncate(item.description, 140)}
+          {truncate(item.desc, 140)}
         </p>
       </div>
     </div>

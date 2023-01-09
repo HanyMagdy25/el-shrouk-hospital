@@ -1,5 +1,5 @@
 .heroNewsInside-section {
-  height: 300px;
+  height: 260px;
 }
 .heroNewsInsideContent {
   color: #193569;
@@ -14,6 +14,9 @@
 }
 .heroNewsInsideContent__images__selected {
   width: 65%;
+}
+.heroNewsInsideContent__images__selected img {
+  object-fit: contain !important;
 }
 .heroNewsInsideContent__images__right {
   width: 35%;

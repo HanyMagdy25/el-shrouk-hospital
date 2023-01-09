@@ -3,6 +3,7 @@ import AboutVisionCard from "./AboutVisionCard";
 import vision1 from "../../../../assets/vision/vision1.png";
 import vision2 from "../../../../assets/vision/vision2.png";
 import vision3 from "../../../../assets/vision/vision3.png";
+import Spinner from "../../../../components/Spinner/Spinner";
 
 const visionData = [
   {
@@ -24,13 +25,19 @@ const visionData = [
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diaorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diaorem ipsum dolor sit amet, consetetur sadipscing elitr, sed dia",
   },
 ];
-function AboutVision() {
+function AboutVision({ aboutData, loadingAbout }) {
   return (
-    <div className="aboutVision container">
-      {visionData.map((item, index) => (
-        <AboutVisionCard key={index} item={item} />
-      ))}
-    </div>
+    <>
+      {loadingAbout ? (
+        <Spinner />
+      ) : (
+        <div className="aboutVision container">
+          {aboutData?.boxes?.map((item, index) => (
+            <AboutVisionCard key={index} item={item} />
+          ))}
+        </div>
+      )}
+    </>
   );
 }
 

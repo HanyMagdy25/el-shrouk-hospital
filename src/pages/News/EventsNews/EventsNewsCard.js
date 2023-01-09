@@ -5,7 +5,7 @@ function EventsNewsCard({ item, type, language }) {
   function truncate(string, n) {
     return string?.length > n ? string.substr(0, n - 1) + "..." : string;
   }
-  console.log("6666",item)
+  // console.log("6666",item)
   return (
     <div
       className={`eventsNewsCard mb-3 flex ${
@@ -14,8 +14,8 @@ function EventsNewsCard({ item, type, language }) {
     >
       <div className="eventsNewsCard__image">
         <img
-          src={item.image[0]}
-          // src={`${url_main}/uploads/news/$${item.id}/${item.images}`}
+          // src={item.image[0]}
+          src={`${url_main}/uploads/news/${item.id}/${item.images}`}
           alt={item.title}
           className="image__mainStyle"
         />
@@ -26,7 +26,11 @@ function EventsNewsCard({ item, type, language }) {
           <span>{item.created_at}</span>
         </div>
         <h2 className=" mt-1">{truncate(item.title, 50)}</h2>
-        <p className="text-xs mt-1">{truncate(item.description, 75)}</p>
+        {/* <p className="text-xs mt-1">{truncate(item.description, 75)}</p> */}
+        <div
+          className="text-xs mt-1"
+          dangerouslySetInnerHTML={{ __html: truncate(item.description, 75)}}
+        />
         <div className="flex justify-end">
           <Link to={`/news/${item.id}`}>
             <button className="flex items-center text-xs md:text-sm font-semibold gap-1 ">

@@ -10,6 +10,7 @@ import News from "./pages/News/News";
 import NewsInside from "./pages/NewsInside/NewsInside";
 import ContactUs from "./components/ContactUs/ContactUs";
 import ContactUsPage from "./pages/ContactUsPage/ContactUsPage";
+import MeetOurTeam from "./pages/MeetOurTeam/MeetOurTeam";
 
 const url_main = "https://el-shrouk-hospital-dashboard.technomasrsystems.com";
 
@@ -20,6 +21,7 @@ function App() {
   const [settings, setSettings] = useState([]);
   const [mainPageHero, setMainPageHero] = useState({});
   const [contact_data, setContact_data] = useState({});
+  const [social, setSocial] = useState({});
   const [language, setLanguage] = useState("en");
   function ScrollToTopAfterChangePage() {
     const { pathname } = useLocation();
@@ -59,6 +61,7 @@ function App() {
         setSettings(data);
         setMainPageHero(data?.data[0]?.mainPage);
         setContact_data(data?.data[0]?.contact_data);
+        setSocial(data?.data[0]?.social);
         // console.log("data.mainPage", data?.data[0]?.mainPage);
       });
   }, [language]);
@@ -81,6 +84,29 @@ function App() {
       });
   }, [language]);
 
+  // To Fetch News
+  const [loadingEvents, setLoadingEvents] = useState(true);
+  const [events, setEvents] = useState([]);
+  const [galleryContent, setGalleryContent] = useState({});
+  useEffect(() => {
+    fetch(`${url_main}/api/newsEvents`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        lang: language,
+      },
+    })
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        setLoadingEvents(false);
+        setEvents(data);
+        setGalleryContent(data?.staticMediaTitles);
+        console.log("loadingEvents", data);
+      });
+  }, [language]);
+
   return (
     <div className="app">
       <BrowserRouter>
@@ -96,6 +122,8 @@ function App() {
                 loadingSettings={loadingSettings}
                 servicesData={servicesData}
                 loadingServices={loadingServices}
+                loadingEvents={loadingEvents}
+                events={events}
               />
             }
           />
@@ -116,12 +144,25 @@ function App() {
           />
           <Route
             path="/news"
-            element={<News language={language} setLanguage={setLanguage} />}
+            element={
+              <News
+                language={language}
+                setLanguage={setLanguage}
+                loadingEvents={loadingEvents}
+                events={events}
+                galleryContent={galleryContent}
+              />
+            }
           />
           <Route
             path="/news/:id"
             element={
-              <NewsInside language={language} setLanguage={setLanguage} />
+              <NewsInside
+                language={language}
+                setLanguage={setLanguage}
+                loadingEvents={loadingEvents}
+                events={events}
+              />
             }
           />
           <Route
@@ -130,10 +171,25 @@ function App() {
               <ContactUsPage language={language} setLanguage={setLanguage} />
             }
           />
+          <Route
+            path="/team"
+            element={
+              <MeetOurTeam language={language} setLanguage={setLanguage} />
+            }
+          />
         </Routes>
         <ScrollToTop smooth color="white" width="32" height="50" />
-        <ContactUs contact_data={contact_data} language={language} />
-        <Footer />
+        <ContactUs
+          contact_data={contact_data}
+          social={social}
+          language={language}
+          loadingSettings={loadingSettings}
+        />
+        <Footer
+          contact_data={contact_data}
+          social={social}
+          language={language}
+        />
       </BrowserRouter>
     </div>
   );

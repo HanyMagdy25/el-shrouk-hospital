@@ -13,6 +13,7 @@ import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper";
 import TeamCard from "./TeamCard";
 import { useWindowInner } from "../../hooks/useWindowInner";
+import Spinner from "../Spinner/Spinner";
 const url_main = "https://el-shrouk-hospital-dashboard.technomasrsystems.com";
 
 function Team({ language }) {
@@ -33,41 +34,45 @@ function Team({ language }) {
       .then((data) => {
         setLoading(false);
         setTeamData(data);
-        // console.log("weCare", data);
-        // setSettings(data.data);
       });
   }, [language]);
   return (
-    <div id="team" className="team container">
-      <div className="flex-center mb-20">
-        <div className="main__title-div">
-          <h2 className="main__title">
-            {language === "en" ? "Meet Our Team" : "فريق العمل"}
-          </h2>
+    <>
+      {loading ? (
+        <Spinner />
+      ) : (
+        <div id="team" className="team container">
+          <div className="flex-center mb-20">
+            <div className="main__title-div">
+              <h2 className="main__title">
+                {language === "en" ? "Meet Our Team" : "فريق العمل"}
+              </h2>
+            </div>
+          </div>
+          <div className="team__swiper relative px-4">
+            <Swiper
+              slidesPerView={isMobile ? 1 : 4}
+              spaceBetween={60}
+              slidesPerGroup={1}
+              loop={true}
+              loopFillGroupWithBlank={true}
+              navigation={true}
+              pagination={{
+                clickable: true,
+              }}
+              modules={[Pagination, Navigation]}
+              className="mySwiper"
+            >
+              {teamData.map((item, index) => (
+                <SwiperSlide key={index}>
+                  <TeamCard item={item} language={language} />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
         </div>
-      </div>
-      <div className="team__swiper relative px-4">
-        <Swiper
-          slidesPerView={isMobile ? 1 : 4}
-          spaceBetween={60}
-          slidesPerGroup={1}
-          loop={true}
-          loopFillGroupWithBlank={true}
-          navigation={true}
-          pagination={{
-            clickable: true,
-          }}
-          modules={[Pagination, Navigation]}
-          className="mySwiper"
-        >
-          {teamData.map((item, index) => (
-            <SwiperSlide key={index}>
-              <TeamCard item={item} language={language} />
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
-    </div>
+      )}
+    </>
   );
 }
 

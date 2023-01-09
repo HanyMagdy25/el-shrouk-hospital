@@ -51,6 +51,7 @@
 
 .eventsNewsCard {
   background-color: var(--color-white);
+  max-height: 130px;
 }
 .eventsNewsCard__image {
   width: 130px;

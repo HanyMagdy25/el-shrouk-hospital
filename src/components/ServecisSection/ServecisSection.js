@@ -3,7 +3,8 @@ import Spinner from "../Spinner/Spinner";
 // import { servicesData } from "../../utils/data";
 import "./ServecisSection.css";
 import ServiceCard from "./ServiceCard/ServiceCard";
-function ServecisSection({ language, servicesData,loadingServices }) {
+function ServecisSection({ language, servicesData, loadingServices }) {
+  console.log("6666servicesData", servicesData);
   return (
     <>
       {loadingServices ? (
@@ -13,21 +14,19 @@ function ServecisSection({ language, servicesData,loadingServices }) {
           <div className="container">
             <div className="flex-center">
               <div className="main__title-div">
-                <h2 className="main__title">Our Medical Services sdf</h2>
+                <h2 className="main__title">
+                  {servicesData.StaticServicesData.ServiceTitle}
+                </h2>
               </div>
             </div>
             <p className="servecisSection__paragraph">
-              We provide distinguished medical service in all different branches
-              of medicine ,When designing and establishing the hospital, it was
-              taken into account to provide the latest electromechanical
-              methods, methods and means for designing hospitals according to
-              Egyptian and international medical codes.
+              {servicesData.StaticServicesData.ServicesDes}
             </p>
-            {/* <div className="servecisSection__cards">
-              {servicesData.map((item, index) => (
+            <div className="servecisSection__cards">
+              {servicesData?.Services?.map((item, index) => (
                 <ServiceCard key={index} item={item} language={language} />
               ))}
-            </div> */}
+            </div>
           </div>
         </div>
       )}

@@ -1,27 +1,30 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import Spinner from "../../../components/Spinner/Spinner";
 
-function HeroAboutContent() {
+function HeroAboutContent({ language, aboutData, loadingAbout }) {
   return (
-    <div className="flex-center flex-column heroAboutContent px-5 lg:px-0">
-      <div className="flex-center">
-        <div className="main__title-div">
-          <h2 className="main__title">About us</h2>
+    <>
+      {loadingAbout ? (
+        <Spinner />
+      ) : (
+        <div className="flex-center flex-column heroAboutContent px-5 lg:px-0">
+          <div className="flex-center">
+            <div className="main__title-div">
+              <h2 className="main__title">
+                {language === "en" ? "About us" : "من نحن"}
+              </h2>
+            </div>
+          </div>
+          <div dangerouslySetInnerHTML={{ __html: aboutData?.Description }} />
+          <Link to="/team">
+            <button className="btn-fill">
+              {language === "en" ? "Meet Our Team" : "تعرف على فريقنا"}
+            </button>
+          </Link>
         </div>
-      </div>
-      <p>
-        Al Shorouk Specialised Hospital (Swiss) is one of the newly established
-        medical facilities in the Arab Republic of Egypt, we belongs to Swiss
-        Hospitals Management Company, which aspires to gain the confidence of
-        all its clients, including individuals, institutions and local and
-        international bodies, as it is keen to provide medical and treatment
-        services in all of its medical departments.
-      </p>
-      <a href="#team">
-        <button className="btn-fill">
-          Meet Our Team
-        </button>
-      </a>
-    </div>
+      )}
+    </>
   );
 }
 

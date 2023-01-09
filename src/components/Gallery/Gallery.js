@@ -4,7 +4,7 @@ import "./Gallery.css";
 import GalleryCard from "./GalleryCard/GalleryCard";
 import GallerySwiper from "./GallerySwiper/GallerySwiper";
 const url_main = "https://el-shrouk-hospital-dashboard.technomasrsystems.com";
-function Gallery({ language }) {
+function Gallery({ language, galleryContent }) {
   const [galleryBtns, setGalleryBtns] = useState([]);
   const [toggle, setToggle] = useState(1);
   useEffect(() => {
@@ -30,14 +30,11 @@ function Gallery({ language }) {
     <div className="gallery container mt-20">
       <div className="flex-center">
         <div className="main__title-div">
-          <h2 className="main__title">Gallery & Media</h2>
+          <h2 className="main__title">{galleryContent?.gallaryMediaTitle}</h2>
         </div>
       </div>
       <p className="gallery__paragraph mt-10 text-center">
-        Al Shorouk Specialised Hospital (Swiss) is one of the newly established
-        medical facilities in the Arab Republic of Egypt, we belongs to Swiss
-        Hospitals Management Company, which aspires to gain the confidence of
-        all its clients, including individuals.
+        {galleryContent?.gallaryMediaDes}
       </p>
       <div className="flex gallery__hover__div px-5 lg:px-0">
         {galleryBtns?.slice(0, 8)?.map((item, index) => (
@@ -57,7 +54,7 @@ function Gallery({ language }) {
         ))}
       </div>
       <div className="px-5 lg:px-0">
-        <GallerySwiper toggle={toggle} language={language}/>
+        <GallerySwiper toggle={toggle} language={language} />
       </div>
     </div>
   );
