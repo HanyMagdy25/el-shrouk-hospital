@@ -1,11 +1,8 @@
-import React, { useState } from "react";
 import "./Footer.css";
 import logo from "../../assets/logo.png";
 import { Link } from "react-router-dom";
 import { IoLogoWhatsapp } from "react-icons/io";
 function Footer({ contact_data, social, language }) {
-  const [whatsapp, setWhatsapp] = useState("01112994482");
-  const [phone, setPhone] = useState("01112994482");
   return (
     <footer>
       <div className="container">

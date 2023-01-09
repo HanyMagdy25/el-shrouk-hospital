@@ -6,12 +6,7 @@ import Spinner from "../../components/Spinner/Spinner";
 import HeroMedical from "./HeroMedical/HeroMedical";
 const url_main = "https://el-shrouk-hospital-dashboard.technomasrsystems.com";
 
-function MedicalServices({
-  setLanguage,
-  language,
-  servicesData,
-  // loadingServices,
-}) {
+function MedicalServices({ setLanguage, language, servicesData }) {
   const [toggle, setToggle] = useState(1);
   const [equipments, setEquipments] = useState([]);
   const [loadingEquipments, setLoadingEquipments] = useState(true);

@@ -35,7 +35,6 @@ function NewsInsideMainContent({ articleInside, loadingArticle }) {
               <span>{articleInside.created_at}</span>
             </div>
             <div
-              className=""
               dangerouslySetInnerHTML={{ __html: articleInside.description }}
             />
           </div>

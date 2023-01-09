@@ -9,8 +9,7 @@ function MeetOurTeam({ language, setLanguage }) {
         <div className="container">
           <Navbar setLanguage={setLanguage} language={language} />
           <div className="mt-11">
-
-          <Team language={language} />
+            <Team language={language} />
           </div>
         </div>
       </div>

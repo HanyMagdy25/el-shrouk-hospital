@@ -25,7 +25,6 @@ function ContactUsForm({ language }) {
       .then((res) => {
         setDone(res.status);
 
-        console.log("res", res);
         if (res.status === "success") {
           setName("");
           setText("");

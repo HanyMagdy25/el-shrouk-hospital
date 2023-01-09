@@ -21,7 +21,6 @@ function About({ setLanguage, language }) {
       .then((data) => {
         setLoadingAbout(false);
         setAboutData(data);
-        console.log("setAboutData", data);
       });
   }, [language]);
   return (

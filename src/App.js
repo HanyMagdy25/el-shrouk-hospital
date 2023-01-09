@@ -18,7 +18,6 @@ function App() {
   const [loadingSettings, setLoadingSettings] = useState(true);
   const [loadingServices, setLoadingServices] = useState(true);
   const [servicesData, setServicesData] = useState([]);
-  const [settings, setSettings] = useState([]);
   const [mainPageHero, setMainPageHero] = useState({});
   const [contact_data, setContact_data] = useState({});
   const [social, setSocial] = useState({});
@@ -58,11 +57,9 @@ function App() {
       })
       .then((data) => {
         setLoadingSettings(false);
-        setSettings(data);
         setMainPageHero(data?.data[0]?.mainPage);
         setContact_data(data?.data[0]?.contact_data);
         setSocial(data?.data[0]?.social);
-        // console.log("data.mainPage", data?.data[0]?.mainPage);
       });
   }, [language]);
 
@@ -80,7 +77,6 @@ function App() {
       .then((data) => {
         setLoadingServices(false);
         setServicesData(data);
-        // console.log("setServicesData",data)
       });
   }, [language]);
 
@@ -103,7 +99,6 @@ function App() {
         setLoadingEvents(false);
         setEvents(data);
         setGalleryContent(data?.staticMediaTitles);
-        console.log("loadingEvents", data);
       });
   }, [language]);
 

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { teamData } from "../../utils/data";
 import "./Team.css";
 
 import { Swiper, SwiperSlide } from "swiper/react";

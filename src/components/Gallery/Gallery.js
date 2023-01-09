@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-// import { galleryData, galleryDataSwiper } from "../../utils/data";
 import "./Gallery.css";
 import GalleryCard from "./GalleryCard/GalleryCard";
 import GallerySwiper from "./GallerySwiper/GallerySwiper";
@@ -20,7 +19,6 @@ function Gallery({ language, galleryContent }) {
       })
       .then((data) => {
         setGalleryBtns(data);
-        // console.log("galleryBtns", data);
       });
   }, [language]);
   const toggleTap = (index) => {

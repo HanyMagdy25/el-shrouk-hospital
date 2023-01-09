@@ -1,10 +1,8 @@
 import React from "react";
 import Spinner from "../Spinner/Spinner";
-// import { servicesData } from "../../utils/data";
 import "./ServecisSection.css";
 import ServiceCard from "./ServiceCard/ServiceCard";
 function ServecisSection({ language, servicesData, loadingServices }) {
-  console.log("6666servicesData", servicesData);
   return (
     <>
       {loadingServices ? (

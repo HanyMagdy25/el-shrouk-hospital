@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 import Spinner from "../../../components/Spinner/Spinner";
 const url_main = "https://el-shrouk-hospital-dashboard.technomasrsystems.com";
 function EventsNews({ language, events, loadingEvents }) {
-  // console.log("events?.news_events", events?.news_events);
   return (
     <>
       {loadingEvents ? (

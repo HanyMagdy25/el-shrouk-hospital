@@ -23,7 +23,6 @@ function NewsInside({ setLanguage, language, loadingEvents, events }) {
       .then((data) => {
         setLoadingArticle(false);
         setarticleInside(data);
-        console.log("articleInside", data);
       });
   }, [language, param.id]);
   return (
