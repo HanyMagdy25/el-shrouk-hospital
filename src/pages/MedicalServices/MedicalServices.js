@@ -59,7 +59,7 @@ function MedicalServices({ setLanguage, language, servicesData }) {
               }
             >
               {servicesData?.Services?.map((item, index) => (
-                <MedicalCardToRead key={index} item={item} />
+                <MedicalCardToRead key={index} item={item} language={language}/>
               ))}
             </div>
             <div

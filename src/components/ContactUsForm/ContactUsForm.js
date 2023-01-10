@@ -44,7 +44,7 @@ function ContactUsForm({ language }) {
           </div>
         </div>
         <form
-          className="contactUs__form rounded-xl flex flex-col items-center"
+          className="contactUs__form rounded-3xl flex flex-col items-center"
           onSubmit={handleContact}
         >
           <input

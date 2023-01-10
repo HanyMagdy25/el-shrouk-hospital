@@ -16,14 +16,14 @@ function Footer({ contact_data, social, language }) {
               <h3>مستشفى الشروق التخصصي</h3>
               <p>{contact_data.address}</p>
               <h5>
-                {language === "en" ? "Hotline" : "الخط الساخن"} :
+                {language === "en" ? "Hotline" : "الخط الساخن"} : 
                 <span>
                   <a
                     href={`tel:${contact_data.hotLine}`}
                     target="_blank"
                     rel="noreferrer"
                   >
-                    {contact_data.hotLine}
+                   {""} {contact_data.hotLine}
                   </a>{" "}
                 </span>{" "}
               </h5>

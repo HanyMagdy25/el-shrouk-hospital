@@ -25,11 +25,13 @@ footer {
 .footer__first__content h4 {
   font-weight: 600;
   font-size: 16px;
+  font-family: "Montserrat", sans-serif;
 }
 .footer__first__content h3 {
   font-weight: 600;
   font-size: 17px;
   margin: 3px 0;
+  font-family: "Noto Kufi Arabic", sans-serif;
 }
 .footer__first__content p {
   color: var(--color-white);

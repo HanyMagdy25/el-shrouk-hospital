@@ -3,7 +3,7 @@ import "./MedicalCardToRead.css";
 import { BsArrowUpShort, BsArrowDownShort } from "react-icons/bs";
 const url_main = "https://el-shrouk-hospital-dashboard.technomasrsystems.com";
 
-const ReadMore = ({ children }) => {
+const ReadMore = ({ children, language }) => {
   const text = children;
   const [isReadMore, setIsReadMore] = useState(true);
   const toggleReadMore = () => {
@@ -15,11 +15,13 @@ const ReadMore = ({ children }) => {
 
       {isReadMore ? (
         <button onClick={toggleReadMore} className="medicalCardToRead__read">
-          Read More <BsArrowDownShort />
+          {language === "en" ? "Read More" : "اقرأ المزيد"}
+          <BsArrowDownShort />
         </button>
       ) : (
         <button onClick={toggleReadMore} className="medicalCardToRead__read">
-          Read Less <BsArrowUpShort />
+          {language === "en" ? "Read Less" : "اقرأ أقل"}
+          <BsArrowUpShort />
         </button>
       )}
     </>

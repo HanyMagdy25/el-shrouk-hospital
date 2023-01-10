@@ -23,7 +23,7 @@ function Home({
         mainPageHero={mainPageHero}
         loadingSettings={loadingSettings}
       />
-      <div className="container flex justify-center items-center mt-10  lg:mt-20">
+      <div className="container flex justify-center items-center mt-10  lg:mt-16">
         <a href="#services">
           {" "}
           <img src={godownIcon} alt="icon" loading="lazy" />
