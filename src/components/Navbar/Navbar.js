@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { BsGlobe2 } from "react-icons/bs";
 import "./Navbar.css";
-import logo from "../../assets/logo.png";
+
 import { navTitle } from "../../utils/data";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import Spinner from "../Spinner/Spinner";
 
-const Navbar = ({ setLanguage, language }) => {
+const Navbar = ({ setLanguage, language, logo, siteName, loadingLogo }) => {
   const [click, setClick] = useState(false);
 
   const handleClick = () => setClick(!click);
@@ -15,9 +16,17 @@ const Navbar = ({ setLanguage, language }) => {
     <>
       <nav className="navbar">
         <div className="navbar-container">
-          <Link to="/" className="navbar-logo">
-            <img src={logo} alt="logo" />
-          </Link>
+          {loadingLogo ? (
+            <Spinner />
+          ) : (
+            <Link to="/" className="navbar-logo">
+              <img src={logo} alt="logo" />
+              <div>
+                <h4>{siteName?.siteTitle_en}</h4>
+                <h3>{siteName?.siteTitle_ar}</h3>
+              </div>
+            </Link>
+          )}
 
           <div className="menu-icon" onClick={handleClick}>
             <span>{click ? <AiOutlineClose /> : <AiOutlineMenu />}</span>

@@ -9,6 +9,9 @@ function News({
   loadingEvents,
   events,
   galleryContent,
+  logo,
+  siteName,
+  loadingLogo,
 }) {
   return (
     <div>
@@ -17,6 +20,9 @@ function News({
         language={language}
         events={events}
         loadingEvents={loadingEvents}
+        logo={logo}
+        siteName={siteName}
+        loadingLogo={loadingLogo}
       />
       <EventsNews
         language={language}

@@ -7,11 +7,20 @@ function HeroMedical({
   servicesData,
   toggleTap,
   toggle,
+  logo,
+  siteName,
+  loadingLogo,
 }) {
   return (
     <div className="hero-section heroMedical">
       <div className="container">
-        <Navbar setLanguage={setLanguage} language={language} />
+        <Navbar
+          setLanguage={setLanguage}
+          language={language}
+          logo={logo}
+          siteName={siteName}
+          loadingLogo={loadingLogo}
+        />
         <div className="mt-10  px-5 lg:px-0">
           <div className="flex-center">
             <div className="main__title-div">

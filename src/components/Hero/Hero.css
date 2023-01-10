@@ -4,6 +4,30 @@
   height: 500px;
   height: unset;
   background-size: cover;
+  padding-bottom: 40px;
+}
+
+.hero1{
+  width: 50px !important;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.hero2{
+  width: 150px !important;
+  height: 150px;
+  position: absolute;
+  top: 20%;
+  right: 0;
+}
+.hero3{
+  width: 50px !important;
+  height: 150px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  
 }
 
 /* ---- HeroContent --------*/

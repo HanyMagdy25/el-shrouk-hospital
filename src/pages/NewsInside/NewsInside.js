@@ -5,7 +5,15 @@ import NewsInsideMainContent from "./HeroNewsInside/NewsInsideMainContent";
 import RelatedNews from "./HeroNewsInside/RelatedNews";
 import "./NewsInside.css";
 const url_main = "https://el-shrouk-hospital-dashboard.technomasrsystems.com";
-function NewsInside({ setLanguage, language, loadingEvents, events }) {
+function NewsInside({
+  setLanguage,
+  language,
+  loadingEvents,
+  events,
+  logo,
+  siteName,
+  loadingLogo,
+}) {
   const param = useParams();
   const [articleInside, setarticleInside] = useState({});
   const [loadingArticle, setLoadingArticle] = useState(true);
@@ -31,6 +39,9 @@ function NewsInside({ setLanguage, language, loadingEvents, events }) {
         language={language}
         setLanguage={setLanguage}
         articleInside={articleInside}
+        logo={logo}
+        siteName={siteName}
+        loadingLogo={loadingLogo}
       />
       <NewsInsideMainContent
         articleInside={articleInside}

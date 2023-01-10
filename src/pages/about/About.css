@@ -21,12 +21,12 @@
 }
 .aboutVisionCard {
   display: flex;
-  gap: 20px;
+  gap: 28px;
   margin-bottom: 50px;
 }
 .aboutVisionCard {
   display: flex;
-  gap: 20px;
+  gap: 25px;
   width: 48%;
 }
 .aboutVisionCard:first-child {
@@ -87,7 +87,7 @@
 @media screen and (max-width: 1000px) {
   .aboutVisionCard {
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
   .aboutVision {
     padding: 0 20px;

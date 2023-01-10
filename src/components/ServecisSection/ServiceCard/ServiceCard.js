@@ -2,7 +2,6 @@ import React from "react";
 import "./ServiceCard.css";
 import { HiArrowNarrowRight, HiArrowNarrowLeft } from "react-icons/hi";
 import { Link } from "react-router-dom";
-// Dummy Data
 const url_main = "https://el-shrouk-hospital-dashboard.technomasrsystems.com";
 function ServiceCard({ item, language }) {
   function truncate(string, n) {

@@ -6,7 +6,14 @@ import Spinner from "../../components/Spinner/Spinner";
 import HeroMedical from "./HeroMedical/HeroMedical";
 const url_main = "https://el-shrouk-hospital-dashboard.technomasrsystems.com";
 
-function MedicalServices({ setLanguage, language, servicesData }) {
+function MedicalServices({
+  setLanguage,
+  language,
+  servicesData,
+  logo,
+  siteName,
+  loadingLogo,
+}) {
   const [toggle, setToggle] = useState(1);
   const [equipments, setEquipments] = useState([]);
   const [loadingEquipments, setLoadingEquipments] = useState(true);
@@ -45,6 +52,9 @@ function MedicalServices({ setLanguage, language, servicesData }) {
         servicesData={servicesData}
         toggleTap={toggleTap}
         toggle={toggle}
+        logo={logo}
+        siteName={siteName}
+        loadingLogo={loadingLogo}
       />
       {loadingEquipments ? (
         <Spinner />
@@ -59,7 +69,11 @@ function MedicalServices({ setLanguage, language, servicesData }) {
               }
             >
               {servicesData?.Services?.map((item, index) => (
-                <MedicalCardToRead key={index} item={item} language={language}/>
+                <MedicalCardToRead
+                  key={index}
+                  item={item}
+                  language={language}
+                />
               ))}
             </div>
             <div
@@ -74,22 +88,6 @@ function MedicalServices({ setLanguage, language, servicesData }) {
                   <MedicalCard key={index} item={item} language={language} />
                 ))}
               </div>
-            </div>
-          </div>
-          <div className="medicalServices__loaction">
-            <div className="flex-center">
-              <div className="main__title-div">
-                <h2 className="main__title">
-                  {language === "en" ? "Location" : "موقعنا"}
-                </h2>
-              </div>
-            </div>
-            <div className="medicalServices__mapImage">
-              <img
-                src={equipments?.imageMap}
-                alt="map"
-                className="rounded-lg"
-              />
             </div>
           </div>
         </div>

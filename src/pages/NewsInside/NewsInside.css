@@ -15,9 +15,9 @@
 .heroNewsInsideContent__images__selected {
   width: 65%;
 }
-.heroNewsInsideContent__images__selected img {
+/* .heroNewsInsideContent__images__selected img {
   object-fit: contain !important;
-}
+} */
 .heroNewsInsideContent__images__right {
   width: 35%;
   gap: 2%;

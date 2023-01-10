@@ -1,8 +1,8 @@
 import "./Footer.css";
-import logo from "../../assets/logo.png";
+// import logo from "../../assets/logo.png";
 import { Link } from "react-router-dom";
 import { IoLogoWhatsapp } from "react-icons/io";
-function Footer({ contact_data, social, language }) {
+function Footer({ contact_data, social, language, logo, siteName }) {
   return (
     <footer>
       <div className="container">
@@ -12,18 +12,18 @@ function Footer({ contact_data, social, language }) {
               <img src={logo} alt="logo" loading="lazy" />
             </div>
             <div className="footer__first__content">
-              <h4>SHOROUK SPECIALISED HOSPITAL</h4>
-              <h3>مستشفى الشروق التخصصي</h3>
+              <h4>{siteName.siteTitle_en}</h4>
+              <h3>{siteName.siteTitle_ar}</h3>
               <p>{contact_data.address}</p>
               <h5>
-                {language === "en" ? "Hotline" : "الخط الساخن"} : 
+                {language === "en" ? "Hotline" : "الخط الساخن"} :
                 <span>
                   <a
                     href={`tel:${contact_data.hotLine}`}
                     target="_blank"
                     rel="noreferrer"
                   >
-                   {""} {contact_data.hotLine}
+                    {""} {contact_data.hotLine}
                   </a>{" "}
                 </span>{" "}
               </h5>
@@ -65,7 +65,15 @@ function Footer({ contact_data, social, language }) {
           </div>
         </div>
         <div className="flex-center copyRight">
-          <p>2022 “shorouk specialised hospital” all rights reserved</p>
+          <p>
+            {language === "en"
+              ? `${
+                  new Date().getFullYear()
+                } “shorouk specialised hospital” all rights reserved`
+              : `كافة الحقوق محفوظة لـ مستشفى الشروق التخصصى  © ${
+                  new Date().getFullYear()
+                }`}
+          </p>
         </div>
       </div>
     </footer>

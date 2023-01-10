@@ -14,6 +14,9 @@ function Home({
   servicesData,
   loadingEvents,
   events,
+  logo,
+  siteName,
+  loadingLogo
 }) {
   return (
     <div>
@@ -22,6 +25,9 @@ function Home({
         language={language}
         mainPageHero={mainPageHero}
         loadingSettings={loadingSettings}
+        logo={logo}
+        siteName={siteName}
+        loadingLogo={loadingLogo}
       />
       <div className="container flex justify-center items-center mt-10  lg:mt-16">
         <a href="#services">

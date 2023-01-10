@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import Spinner from "../../Spinner/Spinner";
+import hero1 from "../../../assets/hero/hero1.png"
+import hero2 from "../../../assets/hero/hero2.png"
+import hero3 from "../../../assets/hero/hero3.png"
 function HeroContent({ mainPageHero, language, loadingSettings }) {
   const [soon, setSoon] = useState(false);
   return (
@@ -30,7 +33,13 @@ function HeroContent({ mainPageHero, language, loadingSettings }) {
             </div>
           </div>
           <div className="heroContent__right">
-            <img src={mainPageHero.mainPageImage} alt="doctor" />
+            <div className="relative">
+
+            <img src={mainPageHero.mainPageImage} alt="doctor" className="" />
+            <img src={hero1} alt="hero1" className="hero1"/>
+            <img src={hero2} alt="hero2" className="hero2 -z-10"/>
+            <img src={hero3} alt="hero3" className="hero3 -z-10"/>
+            </div>
           </div>
         </div>
       )}

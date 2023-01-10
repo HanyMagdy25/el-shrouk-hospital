@@ -20,7 +20,10 @@ function App() {
   const [servicesData, setServicesData] = useState([]);
   const [mainPageHero, setMainPageHero] = useState({});
   const [contact_data, setContact_data] = useState({});
+  const [siteName, setSiteName] = useState({});
+  const [logo, setLogo] = useState("");
   const [social, setSocial] = useState({});
+  const [loadingLogo, setLoadingLogo] = useState(true);
   const [language, setLanguage] = useState("en");
   function ScrollToTopAfterChangePage() {
     const { pathname } = useLocation();
@@ -57,9 +60,12 @@ function App() {
       })
       .then((data) => {
         setLoadingSettings(false);
+        setLoadingLogo(false);
         setMainPageHero(data?.data[0]?.mainPage);
         setContact_data(data?.data[0]?.contact_data);
         setSocial(data?.data[0]?.social);
+        setSiteName(data?.data[0]?.general_Settings);
+        setLogo(data?.data[0]?.siteLogo);
       });
   }, [language]);
 
@@ -119,12 +125,23 @@ function App() {
                 loadingServices={loadingServices}
                 loadingEvents={loadingEvents}
                 events={events}
+                logo={logo}
+                siteName={siteName}
+                loadingLogo={loadingLogo}
               />
             }
           />
           <Route
             path="/about"
-            element={<About language={language} setLanguage={setLanguage} />}
+            element={
+              <About
+                language={language}
+                setLanguage={setLanguage}
+                logo={logo}
+                siteName={siteName}
+                loadingLogo={loadingLogo}
+              />
+            }
           />
           <Route
             path="/services"
@@ -134,6 +151,9 @@ function App() {
                 setLanguage={setLanguage}
                 servicesData={servicesData}
                 loadingServices={loadingServices}
+                logo={logo}
+                siteName={siteName}
+                loadingLogo={loadingLogo}
               />
             }
           />
@@ -146,6 +166,9 @@ function App() {
                 loadingEvents={loadingEvents}
                 events={events}
                 galleryContent={galleryContent}
+                logo={logo}
+                siteName={siteName}
+                loadingLogo={loadingLogo}
               />
             }
           />
@@ -157,19 +180,34 @@ function App() {
                 setLanguage={setLanguage}
                 loadingEvents={loadingEvents}
                 events={events}
+                logo={logo}
+                siteName={siteName}
+                loadingLogo={loadingLogo}
               />
             }
           />
           <Route
             path="/contact"
             element={
-              <ContactUsPage language={language} setLanguage={setLanguage} />
+              <ContactUsPage
+                language={language}
+                setLanguage={setLanguage}
+                logo={logo}
+                siteName={siteName}
+                loadingLogo={loadingLogo}
+              />
             }
           />
           <Route
             path="/team"
             element={
-              <MeetOurTeam language={language} setLanguage={setLanguage} />
+              <MeetOurTeam
+                language={language}
+                setLanguage={setLanguage}
+                logo={logo}
+                siteName={siteName}
+                loadingLogo={loadingLogo}
+              />
             }
           />
         </Routes>
@@ -184,6 +222,8 @@ function App() {
           contact_data={contact_data}
           social={social}
           language={language}
+          siteName={siteName}
+          logo={logo}
         />
       </BrowserRouter>
     </div>

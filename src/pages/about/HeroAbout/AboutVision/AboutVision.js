@@ -8,8 +8,8 @@ function AboutVision({ aboutData, loadingAbout }) {
       {loadingAbout ? (
         <Spinner />
       ) : (
-        <div className="aboutVision container">
-          {aboutData?.boxes?.map((item, index) => (
+        <div className="aboutVision container px-5 lg:px-0">
+          {aboutData?.aboutus?.boxes?.map((item, index) => (
             <AboutVisionCard key={index} item={item} />
           ))}
         </div>

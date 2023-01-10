@@ -16,7 +16,7 @@ function HeroAboutContent({ language, aboutData, loadingAbout }) {
               </h2>
             </div>
           </div>
-          <div dangerouslySetInnerHTML={{ __html: aboutData?.Description }} />
+          <p>{aboutData?.aboutus?.Description}</p>
           <Link to="/team">
             <button className="btn-fill">
               {language === "en" ? "Meet Our Team" : "تعرف على فريقنا"}
