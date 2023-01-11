@@ -66,6 +66,8 @@ function App() {
         setSocial(data?.data[0]?.social);
         setSiteName(data?.data[0]?.general_Settings);
         setLogo(data?.data[0]?.siteLogo);
+
+        console.log(data)
       });
   }, [language]);
 

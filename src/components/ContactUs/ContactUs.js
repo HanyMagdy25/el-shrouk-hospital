@@ -83,7 +83,7 @@ function ContactUs({ contact_data, language, loadingSettings ,social}) {
             </div>
             <div className="contactUs__mapGoogle  py-3">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d109436.06621575782!2d31.362252800000004!3d31.0018048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2seg!4v1672653802035!5m2!1sen!2seg"
+                src={contact_data?.map}
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
