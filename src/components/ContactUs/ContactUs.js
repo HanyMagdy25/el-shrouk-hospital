@@ -6,7 +6,7 @@ import youtubeIcon from "../../assets/youtube.png";
 import Spinner from "../Spinner/Spinner";
 function ContactUs({ contact_data, language, loadingSettings, social }) {
   return (
-    <div className="contactUs mb-20">
+    <section id="contact" className="contactUs mb-20">
       <div className="container">
         <div className="flex-center mb-14">
           <div className="main__title-div">
@@ -85,7 +85,7 @@ function ContactUs({ contact_data, language, loadingSettings, social }) {
           </div>
         )}
       </div>
-    </div>
+    </section>
   );
 }
 

@@ -97,7 +97,9 @@
 .related__threeCards .eventsNewsCard__content button {
   font-size: 10px;
 }
-
+.btn-read-more{
+  font-size: 0.775rem;
+}
 @media screen and (max-width: 1024px) {
   .related__threeCards {
     width: 49%;

@@ -48,6 +48,17 @@ const Navbar = ({ setLanguage, language, logo, siteName, loadingLogo }) => {
                 </NavLink>
               </li>
             ))}
+            <li>
+              <a
+                href="#contact"
+                className={"nav-links "}
+                onClick={() => {
+                  handleClick();
+                }}
+              >
+                {language === "en" ? "CONTACT US" : "تواصل معنا"}
+              </a>
+            </li>
             {/* <div className="flex items-center navbar__lang">
               <BsGlobe2 />
               <select

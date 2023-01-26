@@ -30,7 +30,7 @@ function EventsNewsCard({ item, type, language }) {
         />
         <div className="flex justify-end">
           <Link to={`/news/${item.id}`}>
-            <button className="flex items-center text-xs md:text-sm font-semibold gap-1 ">
+            <button className="flex items-center btn-read-more md:text-sm font-semibold gap-1 ">
               {language === "en" ? "Read More" : "اقرأ المزيد"}
               {language === "en" ? (
                 <HiArrowNarrowRight className="text-lg" />

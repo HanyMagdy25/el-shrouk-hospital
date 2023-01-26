@@ -189,7 +189,7 @@ function App() {
               />
             }
           />
-          <Route
+          {/* <Route
             path="/contact"
             element={
               <ContactUsPage
@@ -200,7 +200,7 @@ function App() {
                 loadingLogo={loadingLogo}
               />
             }
-          />
+          /> */}
           <Route
             path="/team"
             element={

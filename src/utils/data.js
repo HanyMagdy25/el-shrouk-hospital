@@ -19,9 +19,9 @@ export const navTitle = [
     titleArabic: "الأخبار و الأحداث",
     path: "/news",
   },
-  {
-    title: "CONTACT US",
-    titleArabic: "تواصل معنا",
-    path: "/contact",
-  },
+  // {
+  //   title: "CONTACT US",
+  //   titleArabic: "تواصل معنا",
+  //   path: "#contact",
+  // },
 ];
