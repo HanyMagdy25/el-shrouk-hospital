@@ -179,6 +179,14 @@ option {
     top: -45%;
     margin: 0 20px;
   }
+  .scroll-to-top {
+    right: 30px !important;
+    bottom: 40px !important;
+  }
+  .app__social {
+    bottom: 110px;
+    right: 28px;
+  }
 }
 @media screen and (max-width: 640px) {
   .main__title {
@@ -202,14 +210,7 @@ option {
   .gradient {
     height: 40%;
   }
-  .scroll-to-top {
-    right: 30px;
-    bottom: 40px !important;
-  }
-  .app__social {
-    bottom: 110px;
-    right: 28px;
-  }
+
 }
 @media screen and (max-width: 370px) {
   .btn-outline,
