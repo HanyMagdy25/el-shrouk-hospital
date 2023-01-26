@@ -22,7 +22,7 @@
   position: absolute;
   top: 20%;
   right: 0;
-  z-index: 99999;
+  z-index: 97;
 }
 .hero3 {
   width: 50px !important;
@@ -32,7 +32,7 @@
   left: 0;
 }
 .main-doctor {
-  z-index: 999999;
+  z-index: 99;
   /* position: absolute; */
   display: flex;
 }

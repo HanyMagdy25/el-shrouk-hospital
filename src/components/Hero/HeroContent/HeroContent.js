@@ -32,7 +32,7 @@ function HeroContent({ mainPageHero, language, loadingSettings }) {
               </div>
             </div>
           </div>
-          <div className="heroContent__right">
+          <div className="heroContent__right z-0">
             <div className="relative flex">
 
             <img src={mainPageHero.mainPageImage} alt="doctor" className="main-doctor" />
