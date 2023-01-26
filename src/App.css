@@ -202,6 +202,14 @@ option {
   .gradient {
     height: 40%;
   }
+  .scroll-to-top {
+    right: 30px;
+    bottom: 40px !important;
+  }
+  .app__social {
+    bottom: 110px;
+    right: 28px;
+  }
 }
 @media screen and (max-width: 370px) {
   .btn-outline,
