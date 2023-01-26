@@ -4,7 +4,7 @@ import linkedinIcon from "../../assets/linkedin.png";
 import instaIcon from "../../assets/Insta.png";
 import youtubeIcon from "../../assets/youtube.png";
 import Spinner from "../Spinner/Spinner";
-function ContactUs({ contact_data, language, loadingSettings ,social}) {
+function ContactUs({ contact_data, language, loadingSettings, social }) {
   return (
     <div className="contactUs mb-20">
       <div className="container">
@@ -21,7 +21,7 @@ function ContactUs({ contact_data, language, loadingSettings ,social}) {
           <div className="contactUs__image flex">
             <div className="contactUs__image__content rounded-3xl bg-white p-6 ">
               <h3>{language === "en" ? "Contact" : "التواصل"}</h3>
-              <h4 className="flex items-center gap-1">
+              <h4 className="flex items-center gap-1 contactUs__phone__div">
                 {language === "en" ? "Hotline" : "الخط الساخن"} :
                 <span className="contactUs__phone">
                   <a
@@ -54,26 +54,14 @@ function ContactUs({ contact_data, language, loadingSettings ,social}) {
               <h3 className="mt-2">
                 {language === "en" ? "Social Media" : " التواصل الاجتماعى"}
               </h3>
-              <div className="flex space-x-1">
-                <a
-                  href={social.facebook}
-                  target="_blank"
-                  rel="noreferrer"
-                >
+              <div className="flex space-x-1 icons__contact">
+                <a href={social.facebook} target="_blank" rel="noreferrer">
                   <img src={facebookIcon} alt="facebookIcon" />
                 </a>
-                <a
-                  href={social.linkedin}
-                  target="_blank"
-                  rel="noreferrer"
-                >
+                <a href={social.linkedin} target="_blank" rel="noreferrer">
                   <img src={linkedinIcon} alt="linkedinIcon" />
                 </a>
-                <a
-                  href={social.instagram}
-                  target="_blank"
-                  rel="noreferrer"
-                >
+                <a href={social.instagram} target="_blank" rel="noreferrer">
                   <img src={instaIcon} alt="instaIcon" />
                 </a>
                 <a href={social.youtube} target="_blank" rel="noreferrer">
@@ -81,6 +69,7 @@ function ContactUs({ contact_data, language, loadingSettings ,social}) {
                 </a>
               </div>
             </div>
+
             <div className="contactUs__mapGoogle  py-3">
               <iframe
                 src={contact_data?.map}

@@ -122,6 +122,7 @@ p {
   justify-content: center;
   align-items: center;
   z-index: 99 !important;
+  bottom: 85px !important;
 }
 option {
   background: var(--color-bg);
@@ -129,6 +130,46 @@ option {
   font-size: 18px;
   font-weight: 600;
 }
+
+.app__container {
+  position: relative;
+}
+.app__social {
+  position: fixed;
+
+  bottom: 160px;
+  right: 37px;
+  z-index: 999;
+}
+.app__social div {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--color-blue);
+  margin: 0.25rem 0;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  transition: all 0.3s;
+}
+.app__social div:hover {
+  transform: scale(1.1);
+}
+.app__social div svg {
+  width: 22px;
+  height: 22px;
+  color: var(--color-white);
+}
+.phone-icon {
+  background-color: var(--color-black) !important;
+}
+.whats-icon {
+  background-color: var(--color-whats) !important;
+}
+
 @media screen and (max-width: 768px) {
   .main__title {
     font-size: 26px;

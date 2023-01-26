@@ -42,8 +42,17 @@ function WeCare({ language }) {
             </div>
             <div className="weCare__right">
               <h2 className="weCare__right__title">
-                {weCareData?.StaticWeCareData?.weCareTitle}
-                {/* What makes <span>SHOUROK</span> Specialised Hospital Unique ? */}
+                {/* {weCareData?.StaticWeCareData?.weCareTitle} */}
+                {language === "en" ? (
+                  <>
+                    What makes <span>SHOUROK</span> Specialised Hospital Unique
+                    ?
+                  </>
+                ) : (
+                  <>
+                    ما الذي يميز مستشفى <span>الشروق</span> التخصصي؟{" "}
+                  </>
+                )}
               </h2>
               <div className="weCare__right__allCards">
                 {weCareData?.staticIcons?.map((item, index) => (

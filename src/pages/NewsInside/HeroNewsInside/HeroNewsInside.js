@@ -12,7 +12,7 @@ function HeroNewsInside({
   loadingLogo,
 }) {
   return (
-    <div className="hero-section heroNewsInside-section">
+    <div className="hero-about-section heroNewsInside-section">
       <div className="container">
         <Navbar
           setLanguage={setLanguage}

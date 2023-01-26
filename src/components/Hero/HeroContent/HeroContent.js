@@ -33,9 +33,9 @@ function HeroContent({ mainPageHero, language, loadingSettings }) {
             </div>
           </div>
           <div className="heroContent__right">
-            <div className="relative">
+            <div className="relative flex">
 
-            <img src={mainPageHero.mainPageImage} alt="doctor" className="" />
+            <img src={mainPageHero.mainPageImage} alt="doctor" className="main-doctor" />
             <img src={hero1} alt="hero1" className="hero1"/>
             <img src={hero2} alt="hero2" className="hero2 -z-10"/>
             <img src={hero3} alt="hero3" className="hero3 -z-10"/>

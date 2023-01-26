@@ -49,7 +49,7 @@
 @media screen and (max-width: 500px) {
   .gallery__btns button {
     min-width: unset !important;
-    padding: 8px 16px !important;
+    padding: 8px 12px !important;
   }
   .gallerySwiper__bigImage {
     height: 400px;

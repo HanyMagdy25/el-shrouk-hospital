@@ -11,6 +11,7 @@ import NewsInside from "./pages/NewsInside/NewsInside";
 import ContactUs from "./components/ContactUs/ContactUs";
 import ContactUsPage from "./pages/ContactUsPage/ContactUsPage";
 import MeetOurTeam from "./pages/MeetOurTeam/MeetOurTeam";
+import AppWrap from "./wrapper/AppWrap";
 
 const url_main = "https://el-shrouk-hospital-dashboard.technomasrsystems.com";
 
@@ -67,7 +68,7 @@ function App() {
         setSiteName(data?.data[0]?.general_Settings);
         setLogo(data?.data[0]?.siteLogo);
 
-        console.log(data)
+        console.log(data);
       });
   }, [language]);
 
@@ -232,4 +233,4 @@ function App() {
   );
 }
 
-export default App;
+export default AppWrap(App);

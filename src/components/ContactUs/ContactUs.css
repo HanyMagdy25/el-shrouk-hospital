@@ -5,13 +5,16 @@
   color: var(--color-title);
   font-weight: 700;
   font-size: 18px;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 .contactUs__image h4 {
   color: var(--color-btn);
   font-weight: 600;
   font-size: 16px;
   margin-bottom: 8px;
+}
+.contactUs__phone__div{
+  margin-bottom: 4px !important;
 }
 .contactUs__image h4 span {
   color: #626262;
@@ -33,7 +36,10 @@
 .contactUs__mapGoogle iframe {
   border-radius: 10px;
 }
-
+.icons__contact a {
+  width: 40px;
+  height: 40px;
+}
 @media screen and (max-width: 1000px) {
   .contactUs {
     padding: 0 20px;

@@ -12,7 +12,7 @@ function HeroAbout({
   loadingLogo,
 }) {
   return (
-    <div className="hero-section">
+    <div className="hero-about-section">
       <div className="container">
         <Navbar
           setLanguage={setLanguage}

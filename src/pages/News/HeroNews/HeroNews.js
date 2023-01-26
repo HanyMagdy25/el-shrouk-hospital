@@ -10,7 +10,7 @@ function HeroNews({
   loadingLogo,
 }) {
   return (
-    <div className="hero-section heroNews__customHeight">
+    <div className="hero-about-section heroNews__customHeight">
       <div className="container">
         <Navbar
           setLanguage={setLanguage}

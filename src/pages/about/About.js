@@ -24,7 +24,7 @@ function About({ setLanguage, language, logo, siteName, loadingLogo }) {
       });
   }, [language]);
   return (
-    <div className="about  ">
+    <div className="about">
       <HeroAbout
         setLanguage={setLanguage}
         language={language}

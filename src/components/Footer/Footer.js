@@ -8,10 +8,10 @@ function Footer({ contact_data, social, language, logo, siteName }) {
       <div className="container">
         <div className="footer_container ">
           <div className="footer__first">
-            <div className="footer__first__image">
+            <div className="footer__first__image flex-center">
               <img src={logo} alt="logo" loading="lazy" />
             </div>
-            <div className="footer__first__content">
+            <div className="footer__first__content pt-3">
               <h4>{siteName.siteTitle_en}</h4>
               <h3>{siteName.siteTitle_ar}</h3>
               <p>{contact_data.address}</p>

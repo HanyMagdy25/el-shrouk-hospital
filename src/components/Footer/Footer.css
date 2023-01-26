@@ -15,9 +15,12 @@ footer {
 }
 .footer__first .footer__first__image {
   min-width: 90px;
-  max-width: 100px;
+  max-width: 95px;
   min-height: 90px;
-  max-height: 100px;
+  max-height: 95px;
+  background: white;
+  border-radius: 50%;
+  padding: 3px;
 }
 .footer__first img {
   width: 100%;
@@ -31,7 +34,7 @@ footer {
   font-weight: 600;
   font-size: 17px;
   margin: 3px 0;
-  font-family: "Noto Kufi Arabic", sans-serif;
+  font-family: "UbuntuArabic-Bold";
 }
 .footer__first__content p {
   color: var(--color-white);
@@ -39,7 +42,8 @@ footer {
   margin: 10px 0;
 }
 .footer__first__content h5 {
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
+  margin-top: 18px;
 }
 .footer__first__content h5 span {
   font-size: 20px;

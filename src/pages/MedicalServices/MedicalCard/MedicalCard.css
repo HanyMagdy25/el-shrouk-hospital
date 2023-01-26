@@ -7,7 +7,7 @@
 }
 .medicalCard:nth-child(even) {
   margin-top: 80px;
-  margin-bottom: 30px;
+  margin-bottom: 110px;
 }
 
 .medicalCard__img {
@@ -119,5 +119,24 @@
 .medicalCard__icon {
   width: 65px;
   height: 65px;
+}
+}
+@media screen and (max-width: 600px) {
+  .medicalCard {
+    width: 100%;
+    margin-bottom: 190px;
+}
+.medicalCard:nth-child(even) {
+  margin-top: 0px;
+  margin-bottom: 170px;
+}
+.medicalCard__content p {
+  color: #193569;
+  font-weight: 600;
+  font-size: 12px;
+}
+.medicalCard__img {
+  width: 130px;
+  height: 130px;
 }
 }
