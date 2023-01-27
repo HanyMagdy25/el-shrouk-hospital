@@ -31,7 +31,7 @@ function Footer({ contact_data, social, language, logo, siteName }) {
             </div>
           </div>
           <div className="footer__second">
-            <Link to="/about">{language === "en" ? "About" : "من نحن"}</Link>
+            <Link className="mt-2" to="/about">{language === "en" ? "About" : "من نحن"}</Link>
             <Link to="/services">
               {language === "en" ? "Our Services" : "خدماتنا"}
             </Link>

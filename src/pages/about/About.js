@@ -43,7 +43,7 @@ function About({ setLanguage, language, logo, siteName, loadingLogo }) {
             </h2>
           </div>
         </div>
-        <div className="medicalServices__mapImage">
+        <div className="medicalServices__mapImage px-5 lg:px-0">
           <img src={aboutData?.imageMap} alt="map" className="rounded-lg" />
         </div>
       </div>

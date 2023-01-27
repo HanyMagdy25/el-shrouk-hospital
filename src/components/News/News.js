@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "./News.css";
 import { HiArrowNarrowRight, HiArrowNarrowLeft } from "react-icons/hi";
 import Spinner from "../Spinner/Spinner";
 import { Link } from "react-router-dom";
 const url_main = "https://el-shrouk-hospital-dashboard.technomasrsystems.com";
 function News({ language, events, loadingEvents }) {
+  const [newsHover, setNewsHover] = useState(false);
   return (
     <>
       {loadingEvents ? (
@@ -28,33 +29,41 @@ function News({ language, events, loadingEvents }) {
                 />
               </div>
               <div className="news__images__right">
-                <div className="news__images__right__top relative">
+                <div
+                  className="news__images__right__top relative"
+                  onMouseEnter={() => setNewsHover(true)}
+                  onMouseLeave={() => setNewsHover(false)}
+                >
                   {" "}
                   <img
                     src={`${url_main}/uploads/news/${events?.news_events[1]?.id}/${events?.news_events[1]?.images}`}
                     alt="news"
                     className="news__image__style"
                   />
-                  <div className="eventsNews__main__content absolute bottom-0 z-10 w-full p-2 md:p-4 ">
-                    <h3>{events?.news_events[1].title}</h3>
-                    <div className="flex justify-between mt-2">
-                      <div className="font-bold flex gap-4 text-xs">
-                        <span className="">By : Admin</span>
-                        <span>{events?.news_events[1].created_at}</span>
+                  {newsHover && (
+                    <>
+                      <div className="eventsNews__main__content absolute bottom-0 z-10 w-full p-2 md:p-4 ">
+                        <h3>{events?.news_events[1].title}</h3>
+                        <div className="flex justify-between mt-2">
+                          <div className="font-bold flex gap-4 text-xs">
+                            <span className="">By : Admin</span>
+                            <span>{events?.news_events[1].created_at}</span>
+                          </div>
+                          <Link to={`/news/${events?.news_events[1]?.id}`}>
+                            <button className="flex items-center text-xs font-bold gap-2">
+                              {language === "en" ? "Read More" : "اقرأ المزيد"}
+                              {language === "en" ? (
+                                <HiArrowNarrowRight className="text-lg " />
+                              ) : (
+                                <HiArrowNarrowLeft className="text-lg" />
+                              )}
+                            </button>
+                          </Link>
+                        </div>
                       </div>
-                      <Link to={`/news/${events?.news_events[1]?.id}`}>
-                        <button className="flex items-center text-xs font-bold gap-2">
-                          {language === "en" ? "Read More" : "اقرأ المزيد"}
-                          {language === "en" ? (
-                            <HiArrowNarrowRight className="text-lg " />
-                          ) : (
-                            <HiArrowNarrowLeft className="text-lg" />
-                          )}
-                        </button>
-                      </Link>
-                    </div>
-                  </div>
-                  <div className="gradient" />
+                      <div className="gradient" />
+                    </>
+                  )}
                 </div>
                 <div className="news__images__right__bottom">
                   <div>

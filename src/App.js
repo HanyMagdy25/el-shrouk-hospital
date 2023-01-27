@@ -9,7 +9,7 @@ import MedicalServices from "./pages/MedicalServices/MedicalServices";
 import News from "./pages/News/News";
 import NewsInside from "./pages/NewsInside/NewsInside";
 import ContactUs from "./components/ContactUs/ContactUs";
-import ContactUsPage from "./pages/ContactUsPage/ContactUsPage";
+// import ContactUsPage from "./pages/ContactUsPage/ContactUsPage";
 import MeetOurTeam from "./pages/MeetOurTeam/MeetOurTeam";
 import AppWrap from "./wrapper/AppWrap";
 
@@ -67,8 +67,6 @@ function App() {
         setSocial(data?.data[0]?.social);
         setSiteName(data?.data[0]?.general_Settings);
         setLogo(data?.data[0]?.siteLogo);
-
-        console.log(data);
       });
   }, [language]);
 

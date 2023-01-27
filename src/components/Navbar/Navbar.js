@@ -79,7 +79,7 @@ const Navbar = ({ setLanguage, language, logo, siteName, loadingLogo }) => {
                 className="relative  cursor-pointer"
                 onClick={() => setDropLang(!dropLang)}
               >
-                <h4 className=""> {language === "en" ? "EN" : "AR"}</h4>
+                <h4 className=""> {language === "en" ? "EN" : "عربي"}</h4>
                 <span className="flex-center absolute langs-arrows">
                   {dropLang ? (
                     <span className="flex-center">
@@ -99,6 +99,7 @@ const Navbar = ({ setLanguage, language, logo, siteName, loadingLogo }) => {
                     onClick={() => {
                       setDropLang(false);
                       setLanguage("en");
+                      handleClick();
                     }}
                   >
                     EN
@@ -108,9 +109,10 @@ const Navbar = ({ setLanguage, language, logo, siteName, loadingLogo }) => {
                     onClick={() => {
                       setDropLang(false);
                       setLanguage("ar");
+                      handleClick();
                     }}
                   >
-                    AR
+                    عربي
                   </li>
                 </ul>
               )}
