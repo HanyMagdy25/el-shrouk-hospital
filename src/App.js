@@ -25,7 +25,7 @@ function App() {
   const [logo, setLogo] = useState("");
   const [social, setSocial] = useState({});
   const [loadingLogo, setLoadingLogo] = useState(true);
-  const [language, setLanguage] = useState("en");
+  const [language, setLanguage] = useState(null);
   function ScrollToTopAfterChangePage() {
     const { pathname } = useLocation();
     useEffect(() => {
@@ -33,6 +33,20 @@ function App() {
     }, [pathname]);
     return null;
   }
+
+  // LocalStorage to save Language
+  // const [userLanguage, setUserLanguage] = useState();
+  // const laaang = "en"
+ 
+  useEffect(() => {
+    setLanguage(
+      localStorage.getItem("shroukLanguage")
+        ? JSON.parse(localStorage.getItem("shroukLanguage"))
+        : localStorage.setItem("shroukLanguage",JSON.stringify("en"))
+    );
+
+    // localStorage.setItem("shroukLanguage", language ? userLanguage : '')
+  }, []);
 
   // To Change Direction In Body html and css
   useEffect(() => {

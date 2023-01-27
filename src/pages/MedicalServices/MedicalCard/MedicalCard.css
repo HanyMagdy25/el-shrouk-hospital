@@ -143,15 +143,36 @@
     margin-bottom: 175px !important;
   }
   .medicalCard:nth-child(3) {
-    margin-bottom: 50px !important;
+    margin-bottom: 100px !important;
   }
   .medicalCard:nth-child(4) {
-    margin-bottom: 60px !important;
+    margin-bottom: 70px !important;
   }
   .medicalCard:nth-child(5) {
-    margin-bottom: 330px !important;
+    margin-bottom: 320px !important;
   }
   .medicalCard:nth-child(6) {
+    margin-bottom: 220px !important;
+  }
+  .medicalCard:nth-child(7) {
+    margin-bottom: 100px !important;
+  }
+  .medicalCard__ar:nth-child(1) {
+    margin-bottom: 45px;
+  }
+  .medicalCard__ar:nth-child(2) {
+    margin-bottom: 175px !important;
+  }
+  .medicalCard__ar:nth-child(3) {
+    margin-bottom: 50px !important;
+  }
+  .medicalCard__ar:nth-child(4) {
+    margin-bottom: 60px !important;
+  }
+  .medicalCard__ar:nth-child(5) {
+    margin-bottom: 330px !important;
+  }
+  .medicalCard__ar:nth-child(6) {
     margin-bottom: 265px !important;
   }
   .medicalCard:nth-child(even) {

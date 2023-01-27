@@ -100,6 +100,7 @@ const Navbar = ({ setLanguage, language, logo, siteName, loadingLogo }) => {
                       setDropLang(false);
                       setLanguage("en");
                       handleClick();
+                      localStorage.setItem("shroukLanguage",JSON.stringify("en"))
                     }}
                   >
                     EN
@@ -110,6 +111,7 @@ const Navbar = ({ setLanguage, language, logo, siteName, loadingLogo }) => {
                       setDropLang(false);
                       setLanguage("ar");
                       handleClick();
+                      localStorage.setItem("shroukLanguage",JSON.stringify("ar"))
                     }}
                   >
                     عربي
