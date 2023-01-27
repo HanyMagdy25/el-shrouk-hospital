@@ -106,7 +106,7 @@ const Navbar = ({ setLanguage, language, logo, siteName, loadingLogo }) => {
                     EN
                   </li>
                   <li
-                    className="cursor-pointer optionLang"
+                    className="cursor-pointer optionLang "
                     onClick={() => {
                       setDropLang(false);
                       setLanguage("ar");
