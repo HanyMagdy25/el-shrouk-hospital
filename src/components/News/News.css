@@ -11,12 +11,15 @@
 }
 .news__images__left {
   width: 49%;
+  height: 100%;
 }
 .news__images__right {
   width: 49%;
   display: flex;
   flex-direction: column-reverse;
   gap: 2%;
+  height: 100%;
+
 }
 .news__images__right__top {
   width: 100%;
@@ -36,12 +39,13 @@
 @media screen and (max-width: 1000px) {
   .news__images {
     padding: 0 20px;
-    height: unset;
+    height: 500px;
   }
 }
 @media screen and (max-width: 768px) {
   .news__images {
     gap: 10px;
+    height: unset;
   }
   .news__images__right {
     gap: 10px;
@@ -53,9 +57,11 @@
   .news__images__left {
     width: 100%;
     max-height: 500px;
+    height: unset;
   }
   .news__images__right {
     width: 100%;
     max-height: 500px;
+    height: unset;
   }
 }
